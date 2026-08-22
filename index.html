@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  
-  <!-- SEO METADATA -->
-  <title>Agora Poupe Mais | Universo Feminino — Achadinhos e Ofertas VIP</title>
-  <meta name="description" content="Descubra achadinhos, ofertas, cupons e oportunidades selecionadas para o universo feminino. Entre gratuitamente no grupo APM | Universo Feminino da marca Agora Poupe Mais." />
-  <meta name="keywords" content="Agora Poupe Mais, APM Universo Feminino, achadinhos, ofertas femininas, cupons de desconto, moda, beleza, skincare, casa, whatsapp ofertas" />
-  
-  <!-- OPEN GRAPH / SOCIAL -->
-  <meta property="og:title" content="Agora Poupe Mais | APM — Universo Feminino" />
-  <meta property="og:description" content="Você não precisa procurar. A gente garimpa, você aproveita. Do look completo ao pequeno acessório no seu WhatsApp." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://garimpa.store/c/universo-feminino-hvtoo" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agora Poupe Mais | Universo Feminino — Achadinhos, Ofertas e Cupons</title>
+  <meta name="description" content="Descubra achadinhos, ofertas, cupons e oportunidades exclusivas para o universo feminino. Moda, beleza, casa e acessórios garimpados para você no WhatsApp.">
+  <meta name="theme-color" content="#08050B">
 
   <!-- TAILWIND CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
+  
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
-  <!-- TAILWIND CUSTOM CONFIGURATION -->
+  <!-- TAILWIND CUSTOM CONFIG -->
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            editorial: ['"Cormorant Garamond"', 'serif'],
-          },
           colors: {
             apm: {
               black: '#08050B',
-              darkPlum: '#100A18',
-              card: '#180F24',
-              cardHover: '#211532',
-              border: '#2E1C44',
+              darkPlum: '#130A18',
+              card: '#180E1F',
+              cardHover: '#23142D',
+              border: '#331B3F',
               pink: '#FF2A85',
-              pinkHover: '#E01E70',
+              pinkHover: '#E01B70',
               pinkGlow: 'rgba(255, 42, 133, 0.35)',
               gold: '#FFC700',
-              goldLight: '#FFE380',
-              gray: '#A79BB8',
-              grayLight: '#F3EEF8',
+              grayLight: '#E2E8F0',
+              gray: '#94A3B8',
+              wine: '#280A22'
             }
           },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif']
+          },
           animation: {
-            'glow-pulse': 'glowPulse 3s infinite ease-in-out',
-            'float-slow': 'floatSlow 5s infinite ease-in-out',
-            'shimmer': 'shimmer 3s infinite linear',
-            'subtle-scale': 'subtleScale 6s infinite ease-in-out',
+            'float-slow': 'float 6s ease-in-out infinite',
+            'float-delayed': 'float 6s ease-in-out 3s infinite',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite linear',
           },
           keyframes: {
-            glowPulse: {
-              '0%, 100%': { boxShadow: '0 0 25px rgba(255, 42, 133, 0.3)', transform: 'scale(1)' },
-              '50%': { boxShadow: '0 0 45px rgba(255, 42, 133, 0.6)', transform: 'scale(1.015)' },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
             },
-            floatSlow: {
-              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-              '50%': { transform: 'translateY(-12px) rotate(1deg)' },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+              '50%': { opacity: '0.8', transform: 'scale(1.05)' },
             },
             shimmer: {
               '0%': { backgroundPosition: '-200% 0' },
-              '100%': { backgroundPosition: '200% 0' },
-            },
-            subtleScale: {
-              '0%, 100%': { transform: 'scale(1)' },
-              '50%': { transform: 'scale(1.03)' },
+              '100%': { backgroundPosition: '200% 0' }
             }
           }
         }
@@ -78,19 +65,16 @@
     }
   </script>
 
-  <!-- CUSTOM STYLES & ACCENT DESIGN TOKENS -->
+  <!-- CUSTOM CSS STYLES -->
   <style>
-    html {
-      color-scheme: dark;
-    }
     body {
       background-color: #08050B;
-      color: #F3EEF8;
+      color: #F8F9FA;
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
     .text-gradient-pink {
-      background: linear-gradient(135deg, #FFFFFF 0%, #FF85C0 45%, #FF2A85 100%);
+      background: linear-gradient(135deg, #FFFFFF 0%, #FF85B8 50%, #FF2A85 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -99,35 +83,36 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    .btn-glow {
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 25px rgba(255, 42, 133, 0.4);
+    }
+    .btn-glow:hover {
+      box-shadow: 0 0 40px rgba(255, 42, 133, 0.7);
+      transform: translateY(-2px) scale(1.02);
+    }
+    .btn-glow:active {
+      transform: translateY(1px) scale(0.99);
+    }
     .glass-panel {
-      background: rgba(24, 15, 36, 0.75);
+      background: rgba(24, 14, 31, 0.75);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 42, 133, 0.15);
     }
-    .glass-card-hover {
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    .glass-card {
+      background: linear-gradient(180deg, rgba(35, 20, 45, 0.8) 0%, rgba(20, 10, 26, 0.9) 100%);
+      border: 1px solid rgba(255, 42, 133, 0.2);
     }
-    .glass-card-hover:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255, 42, 133, 0.45);
-      box-shadow: 0 15px 35px -10px rgba(255, 42, 133, 0.25);
+    .glass-card:hover {
+      border-color: rgba(255, 42, 133, 0.5);
+      box-shadow: 0 10px 30px -10px rgba(255, 42, 133, 0.25);
     }
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #08050B;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #2E1C44;
-      border-radius: 3px;
-    }
-    /* Smooth reveal effect */
     .reveal-on-scroll {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
     .reveal-on-scroll.is-visible {
       opacity: 1;
@@ -135,47 +120,69 @@
     }
   </style>
 </head>
-
-<body class="bg-apm-black text-apm-grayLight antialiased selection:bg-apm-pink selection:text-white pb-24 lg:pb-0 custom-scrollbar">
+<body class="antialiased selection:bg-apm-pink selection:text-white">
 
   <!-- HEADER COM NÍVEL CLEAR DE HIERARQUIA DE MARCA -->
   <header class="sticky top-0 z-50 bg-apm-black/90 backdrop-blur-xl border-b border-apm-border/60 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- HIERARQUIA DE MARCA: AGORA POUPE MAIS -> APM | UNIVERSO FEMININO -->
-      <a href="#" class="flex items-center gap-3.5 group" aria-label="Agora Poupe vou fazer um teste &nbsp;&nbsp;Mais - APM Universo Feminino">
+      <!-- HIERARQUIA DE MARCA COM O LOGO OFICIAL APM UNIVERSO FEMININO -->
+      <a href="#" class="flex items-center gap-3.5 group" aria-label="Agora Poupe Mais - APM Universo Feminino">
         
-        <!-- EMBLEMA VISUAL OFICIAL INSPIRADO NO LOGO (Sacola + Heart + Price Tag + Dollar + Fashion) -->
-        <div class="relative w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-apm-pink via-purple-600 to-apm-gold p-[2px] shadow-lg shadow-apm-pink/20 group-hover:scale-105 transition-transform duration-300">
-          <div class="w-full h-full bg-apm-black rounded-[14px] flex items-center justify-center relative overflow-hidden">
-            <!-- Icon Composition representing the official Logo APM -->
-            <svg class="w-7 h-7 text-white" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Shopping Bag outline -->
-              <path d="M10 14C10 12.8954 10.8954 12 12 12H28C29.1046 12 30 12.8954 30 14V30C30 31.1046 29.1046 32 28 32H12C10.8954 32 10 31.1046 10 30V14Z" stroke="url(#pinkGoldGrad)" stroke-width="2"/>
-              <!-- Handles -->
-              <path d="M15 12V9C15 6.23858 17.2386 4 20 4V4C22.7614 4 25 6.23858 25 9V12" stroke="#FF2A85" stroke-width="2" stroke-linecap="round"/>
-              <!-- Heart Badge Inside -->
-              <path d="M20 25C20 25 15 21.5 15 18.5C15 17 16.2 16 17.5 16C18.8 16 19.8 17 20 17.5C20.2 17 21.2 16 22.5 16C23.8 16 25 17 25 18.5C25 21.5 20 25 20 25Z" fill="#FFC700"/>
-              <defs>
-                <linearGradient id="pinkGoldGrad" x1="10" y1="12" x2="30" y2="32" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#FF2A85"/>
-                  <stop offset="1" stop-color="#FFC700"/>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span class="absolute bottom-0.5 right-1 text-[7px] font-black text-apm-gold tracking-tighter">R$</span>
-          </div>
+        <!-- LOGO OFICIAL VETORIAL E ESCALÁVEL APM -->
+        <div class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-apm-black border border-apm-pink/40 p-1 shadow-lg shadow-apm-pink/20 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center shrink-0">
+          <svg class="w-full h-full text-white" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="250" cy="250" r="245" fill="#08050B"/>
+            <path d="M115 160 L118 150 L121 160 L131 163 L121 166 L118 176 L115 166 L105 163 Z" fill="#FFC700"/>
+            <path d="M365 135 L368 128 L371 135 L378 138 L371 141 L368 148 L365 141 L358 138 Z" fill="#FFC700"/>
+            <path d="M342 170 L344 163 L346 170 L353 172 L346 174 L344 181 L342 174 L335 172 Z" fill="#FFC700"/>
+            <path d="M196 82 C178 82 153 92 135 120 C148 116 168 118 180 128 C192 138 188 152 181 165 C172 180 152 195 152 201 C165 190 182 182 188 168 C193 155 197 132 186 118 C195 128 198 148 193 175 C190 192 182 208 186 215 C187 202 196 186 200 170 C204 150 200 120 196 82 Z" fill="#FF2A85"/>
+            <path d="M215 90 L285 90 C288 90 290 92 291 95 L318 182 C319 186 316 190 312 190 L198 190 C194 190 191 186 192 182 L210 95 C211 92 213 90 215 90 Z" stroke="#FF2A85" stroke-width="12" fill="none"/>
+            <path d="M235 90 V70 C235 56 246 45 260 45 C274 45 285 56 285 70 V90" stroke="#FF2A85" stroke-width="12" stroke-linecap="round" fill="none"/>
+            <path d="M310 115 C303 115 298 120 298 127 C298 139 310 150 318 157 C326 150 338 139 338 127 C338 120 333 115 326 115 C321 115 317 118 318 122 C319 118 315 115 310 115 Z" fill="#FF2A85"/>
+            <g transform="translate(370, 190) rotate(15)">
+              <path d="M0 0 L35 -20 L65 25 L30 45 Z" fill="#FFC700" rx="4"/>
+              <circle cx="15" cy="-2" r="4" fill="#08050B"/>
+              <path d="M30 5 L30 25 M22 17 L30 25 L38 17" stroke="#08050B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="12" y="38" fill="#08050B" font-family="sans-serif" font-weight="900" font-size="16">R$</text>
+            </g>
+            <path d="M72 280 L140 172 L208 280 H168 L140 230 L112 280 H72 Z" fill="#FFFFFF"/>
+            <path d="M140 230 L122 258 H158 L140 230 Z" fill="#08050B"/>
+            <path d="M140 225 L140 280 M120 258 L140 280 L160 258" stroke="#FF2A85" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M186 172 H242 C265 172 282 188 282 208 C282 228 265 244 242 244 H216 V280 H186 V172 Z M216 198 V218 H240 C246 218 252 214 252 208 C252 202 246 198 240 198 H216 Z" fill="#FFFFFF"/>
+            <path d="M276 172 H310 L336 230 L362 172 H396 V280 H368 V222 L345 272 H327 L304 222 V280 H276 V172 Z" fill="#FF2A85"/>
+            <text x="60" y="322" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28" letter-spacing="1">AGORA</text>
+            <text x="215" y="322" fill="#FF2A85" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28" letter-spacing="1">POUPE MAIS</text>
+            <line x1="57" y1="336" x2="443" y2="336" stroke="#FF2A85" stroke-width="3"/>
+            <g fill="#FF2A85" transform="translate(0, 342)">
+              <path d="M102 12 L106 5 L114 5 L118 12 L128 28 L116 28 L122 45 L98 45 L104 28 L92 28 Z"/>
+              <line x1="150" y1="8" x2="150" y2="38" stroke="#FF2A85" stroke-width="2"/>
+              <path d="M172 20 C172 12 180 12 185 12 C190 12 198 12 198 20 V22 H205 L202 42 H168 L165 22 H172 V20 Z" fill="none" stroke="#FF2A85" stroke-width="3"/>
+              <line x1="225" y1="8" x2="225" y2="38" stroke="#FF2A85" stroke-width="2"/>
+              <rect x="252" y="24" width="12" height="18" rx="2"/>
+              <path d="M254 24 L254 14 L262 9 L262 24 Z"/>
+              <line x1="295" y1="8" x2="295" y2="38" stroke="#FF2A85" stroke-width="2"/>
+              <rect x="317" y="10" width="16" height="6" rx="1"/>
+              <path d="M312 20 C312 16 338 16 338 20 V40 C338 44 312 44 312 40 Z" fill="none" stroke="#FF2A85" stroke-width="3"/>
+              <line x1="365" y1="8" x2="365" y2="38" stroke="#FF2A85" stroke-width="2"/>
+              <circle cx="390" cy="14" r="3" fill="none" stroke="#FF2A85" stroke-width="2"/>
+              <path d="M390 17 L384 38 A6 6 0 0 0 396 38 Z" fill="none" stroke="#FF2A85" stroke-width="2"/>
+            </g>
+            <text x="250" y="405" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" text-anchor="middle" letter-spacing="1">MODA | BELEZA | ACESSÓRIOS | CASA | E MUITO MAIS</text>
+            <line x1="110" y1="436" x2="160" y2="436" stroke="#FF2A85" stroke-width="2"/>
+            <text x="250" y="432" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12" text-anchor="middle" letter-spacing="1">TUDO PARA ELA,</text>
+            <text x="250" y="448" fill="#FF2A85" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" text-anchor="middle" letter-spacing="1">PREÇOS QUE ENCANTAM</text>
+            <line x1="340" y1="436" x2="390" y2="436" stroke="#FF2A85" stroke-width="2"/>
+          </svg>
         </div>
         
         <!-- TEXTUAL BRAND HIERARCHY -->
         <div class="flex flex-col">
-          <!-- MARCA PRINCIPAL (AGORA POUPE MAIS) COM MAIOR DESTAQUE -->
           <div class="flex items-center gap-1.5">
             <span class="font-black tracking-tight text-base sm:text-lg text-white leading-none uppercase">
               AGORA POUPE MAIS
             </span>
           </div>
-          <!-- SUB-MARCA / NICHO (APM | UNIVERSO FEMININO) -->
           <div class="flex items-center gap-1 mt-1">
             <span class="text-apm-pink font-extrabold text-[10px] sm:text-xs tracking-wider uppercase">APM</span>
             <span class="text-apm-gold font-bold text-[10px]">|</span>
@@ -184,115 +191,90 @@
         </div>
       </a>
 
-      <!-- DESKTOP NAV LINKS -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-apm-gray">
-        <a href="#conceito" class="hover:text-apm-pink transition-colors">O Conceito</a>
-        <a href="#categorias" class="hover:text-apm-pink transition-colors">Categorias</a>
-        <a href="#como-funciona" class="hover:text-apm-pink transition-colors">Como Funciona</a>
-        <a href="#faq" class="hover:text-apm-pink transition-colors">Dúvidas</a>
-      </nav>
+      <!-- COMPACT HEADER CTA BUTTON -->
+      <div>
+        <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-gradient-to-r from-apm-pink to-rose-600 hover:from-rose-600 hover:to-apm-pink text-white font-extrabold text-xs sm:text-sm px-4 sm:px-6 py-2.5 rounded-full transition-all duration-300 shadow-md shadow-apm-pink/20 hover:shadow-apm-pink/40">
+          <span class="hidden xs:inline">ENTRAR NO GRUPO</span>
+          <span class="xs:hidden">ENTRAR</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
 
-      <!-- HEADER CTA BUTTON -->
-      <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer" 
-         class="hidden sm:inline-flex items-center gap-2.5 bg-gradient-to-r from-apm-pink to-pink-600 hover:from-apm-pinkHover hover:to-pink-700 text-white font-extrabold px-6 py-2.5 rounded-full shadow-lg shadow-apm-pink/25 transition-all hover:scale-105 active:scale-95 text-xs sm:text-sm tracking-wide">
-        <span>ENTRAR NO GRUPO</span>
-        <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
-          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
-        </svg>
-      </a>
     </div>
   </header>
 
-  <!-- HERO SECTION (PRIMEIRA DOBRA DE ALTA CONVERSÃO) -->
-  <section class="relative pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden">
-    <!-- Ambient Atmospheric Glows -->
-    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-apm-pink/15 blur-[150px] rounded-full pointer-events-none"></div>
-    <div class="absolute top-20 right-0 w-[400px] h-[400px] bg-purple-900/20 blur-[140px] rounded-full pointer-events-none"></div>
-    <div class="absolute bottom-10 left-0 w-[350px] h-[350px] bg-apm-gold/10 blur-[130px] rounded-full pointer-events-none"></div>
+  <main>
+    <!-- HERO - PRIMEIRA DOBRA DE ALTO IMPACTO -->
+    <section class="relative pt-12 pb-20 sm:pt-16 sm:pb-28 overflow-hidden bg-gradient-to-b from-apm-black via-apm-darkPlum to-apm-black">
+      
+      <!-- BACKGROUND GLOW EFFECTS -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-apm-pink/15 rounded-full blur-[140px] pointer-events-none"></div>
+      <div class="absolute top-10 right-10 w-72 h-72 bg-apm-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- HERO LEFT COLUMN (Headline & Value Prop) -->
-        <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          <!-- VIP BRAND BADGE -->
-          <div class="inline-flex items-center gap-2.5 bg-apm-card/90 border border-apm-border/80 px-4 py-2 rounded-full mb-6 text-xs font-semibold tracking-wider uppercase backdrop-blur-md shadow-md">
-            <span class="flex h-2.5 w-2.5 relative">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-apm-pink opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-apm-pink"></span>
-            </span>
-            <span class="text-white font-extrabold tracking-tight">AGORA POUPE MAIS</span>
-            <span class="text-apm-gold">•</span>
-            <span class="text-apm-pink font-extrabold">APM | UNIVERSO FEMININO</span>
-          </div>
-
-          <!-- HEADLINE PRINCIPAL IMPACTANTE -->
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-6">
-            Os achadinhos que <br class="hidden sm:inline" />
-            <span class="text-gradient-pink italic font-editorial font-normal">toda mulher gostaria de</span> <br class="hidden sm:inline" />
-            <span class="text-white">encontrar primeiro.</span>
-          </h1>
-
-          <!-- SUBHEADLINE CLARA E PERSUASIVA -->
-          <p class="text-base sm:text-lg text-apm-gray max-w-2xl font-normal leading-relaxed mb-8">
-            Daquela peça que você estava procurando ao pequeno acessório que você nem sabia que precisava: a gente garimpa ofertas, cupons e achadinhos para você.
-          </p>
-
-          <!-- CORE SLOGAN HIGHLIGHT -->
-          <div class="mb-8 p-4 px-6 rounded-2xl bg-gradient-to-r from-apm-card via-apm-darkPlum to-apm-card border border-apm-pink/40 flex items-center gap-3.5 shadow-xl">
-            <span class="text-apm-gold text-2xl">✨</span>
-            <p class="text-xs sm:text-sm font-bold text-white tracking-wide">
-              "Você não precisa  aqui vai o teste procurar. <span class="text-apm-pink underline underline-offset-4 decoration-apm-pink/60">A gente garimpa, você aproveita.</span>"
-            </p>
-          </div>
-
-          <!-- PRIMARY HERO CTA -->
-          <div class="w-full sm:w-auto flex flex-col items-center lg:items-start gap-4">
-            <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer"
-               class="w-full sm:w-auto inline-flex items-center justify-center gap-3.5 bg-gradient-to-r from-apm-pink via-pink-600 to-rose-600 hover:from-apm-pinkHover hover:to-rose-700 text-white font-extrabold text-base sm:text-lg px-9 py-4.5 rounded-2xl shadow-2xl shadow-apm-pink/40 animate-glow-pulse transition-all duration-300 hover:scale-[1.03] active:scale-95 text-center">
-              <span class="text-xl">💗</span>
-              <span>QUERO ENTRAR NO GRUPO GRÁTIS</span>
-              <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
-                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
-              </svg>
-            </a>
-
-            <!-- MICRO TRUST INDICATORS -->
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs font-semibold text-apm-gray mt-2">
-              <span class="flex items-center gap-1.5 text-white">
-                <svg class="w-4 h-4 text-apm-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                Entrada gratuita
-              </span>
-              <span class="flex items-center gap-1.5 text-white">
-                <svg class="w-4 h-4 text-apm-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                Achadinhos no WhatsApp
-              </span>
-              <span class="flex items-center gap-1.5 text-white">
-                <svg class="w-4 h-4 text-apm-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                Sem compromisso
-              </span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- HERO RIGHT COLUMN (Editorial Moodboard Presentation) -->
-        <div class="lg:col-span-5 relative flex justify-center items-center mt-6 lg:mt-0">
-          
-          <div class="relative w-full max-w-[390px] sm:max-w-[430px]">
+          <!-- COLUNA ESQUERDA: COPYWRITING & CONVERSION -->
+          <div class="lg:col-span-7 text-left space-y-6 sm:space-y-8">
             
-            <!-- Glowing Rim Frame Effect -->
-            <div class="absolute -inset-1 bg-gradient-to-tr from-apm-pink via-purple-600 to-apm-gold rounded-[38px] blur-xl opacity-50 animate-pulse"></div>
+            <!-- SELO DE NICHO -->
+            <div class="inline-flex items-center gap-2 bg-apm-wine/80 border border-apm-pink/40 px-3.5 py-1.5 rounded-full backdrop-blur-md">
+              <span class="w-2 h-2 rounded-full bg-apm-pink animate-pulse"></span>
+              <span class="text-xs font-bold text-apm-pink tracking-widest uppercase">✨ APM | UNIVERSO FEMININO</span>
+            </div>
 
+            <!-- HEADLINE PRINCIPAL -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+              Os achadinhos que toda mulher gostaria de <span class="text-gradient-pink font-black">encontrar primeiro.</span>
+            </h1>
+
+            <!-- SUBHEADLINE -->
+            <p class="text-base sm:text-lg text-apm-grayLight/90 font-normal leading-relaxed max-w-2xl">
+              Daquela peça que você estava procurando ao pequeno acessório que você nem sabia que precisava: a gente garimpa ofertas, cupons e achadinhos do universo feminino para você.
+            </p>
+
+            <!-- CALL TO ACTION PRINCIPAL -->
+            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer" 
+                 class="btn-glow inline-flex items-center justify-center gap-3 bg-gradient-to-r from-apm-pink via-rose-500 to-apm-pink text-white font-black text-base sm:text-lg px-8 py-4 sm:py-5 rounded-2xl transition-all text-center group">
+                <span class="text-xl">💗</span>
+                <span>QUERO ENTRAR NO GRUPO GRÁTIS</span>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+
+            <!-- TRUST PROOF REASSURANCE -->
+            <div class="flex items-center gap-3 text-xs sm:text-sm text-apm-gray font-medium pt-1">
+              <span class="flex items-center gap-1.5 text-apm-grayLight"><span class="text-apm-pink font-bold">✓</span> Entrada Gratuita</span>
+              <span class="text-apm-border">•</span>
+              <span class="flex items-center gap-1.5 text-apm-grayLight"><span class="text-apm-pink font-bold">✓</span> Achadinhos no WhatsApp</span>
+              <span class="text-apm-border">•</span>
+              <span class="flex items-center gap-1.5 text-apm-grayLight"><span class="text-apm-pink font-bold">✓</span> Sem Compromisso</span>
+            </div>
+
+          </div>
+
+          <!-- COLUNA DIREITA: HERÓI VISUAL COMPOSIÇÃO EDITORIAL -->
+          <div class="lg:col-span-5 relative flex justify-center">
+            
             <!-- Main Moodboard Frame Container -->
             <div class="relative bg-apm-card border border-apm-border/90 rounded-[34px] p-5 shadow-2xl overflow-hidden backdrop-blur-xl">
               
-              <!-- Moodboard Top Header -->
+              <!-- Moodboard Top Header com o Logo Oficial -->
               <div class="flex items-center justify-between border-b border-apm-border/80 pb-4 mb-4">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-xl bg-apm-black border border-apm-pink/40 flex items-center justify-center font-bold text-apm-pink text-xs shadow-inner">
-                    <span class="text-apm-pink font-extrabold">APM</span>
+                  <div class="w-10 h-10 rounded-full bg-apm-black border border-apm-pink/50 p-0.5 shadow-md shrink-0 flex items-center justify-center">
+                    <svg class="w-full h-full" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="250" cy="250" r="245" fill="#08050B"/>
+                      <path d="M196 82 C178 82 153 92 135 120 C148 116 168 118 180 128 C192 138 188 152 181 165 C172 180 152 195 152 201 C165 190 182 182 188 168 C193 155 197 132 186 118 Z" fill="#FF2A85"/>
+                      <path d="M215 90 L285 90 C288 90 290 92 291 95 L318 182 C319 186 316 190 312 190 L198 190 Z" stroke="#FF2A85" stroke-width="14" fill="none"/>
+                      <path d="M72 280 L140 172 L208 280 H168 L140 230 L112 280 H72 Z" fill="#FFFFFF"/>
+                      <path d="M186 172 H242 C265 172 282 188 282 208 C282 228 265 244 242 244 H216 V280 H186 V172 Z" fill="#FFFFFF"/>
+                      <path d="M276 172 H310 L336 230 L362 172 H396 V280 H368 V222 L345 272 H327 L304 222 V280 H276 V172 Z" fill="#FF2A85"/>
+                      <text x="60" y="325" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28">AGORA</text>
+                      <text x="215" y="325" fill="#FF2A85" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28">POUPE MAIS</text>
+                    </svg>
                   </div>
                   <div>
                     <h3 class="text-xs font-extrabold text-white tracking-wide">AGORA POUPE MAIS</h3>
@@ -306,77 +288,74 @@
                 </span>
               </div>
 
-              <!-- Editorial Product Grid Mockup (Representation of Multi-category Products) -->
-              <div class="grid grid-cols-2 gap-3 mb-4">
+              <!-- Editorial Product Grid Mockup -->
+              <div class="grid grid-cols-2 gap-3.5">
                 
-                <!-- Product Tile 1: Moda -->
-                <div class="bg-apm-darkPlum/90 rounded-2xl p-3 border border-apm-border flex flex-col justify-between relative group hover:border-apm-pink/60 transition-colors">
-                  <div class="absolute top-2 right-2 bg-apm-pink text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded shadow">
-                    DESCONTO
+                <!-- Item 1: Skincare & Perfumes -->
+                <div class="bg-apm-black/80 rounded-2xl p-3.5 border border-apm-border/60 hover:border-apm-pink/40 transition-colors group">
+                  <div class="h-28 rounded-xl bg-gradient-to-tr from-purple-900/40 to-pink-900/40 p-3 flex items-center justify-center relative overflow-hidden">
+                    <span class="text-4xl transform group-hover:scale-110 transition-transform">🌸</span>
+                    <span class="absolute top-2 right-2 text-[9px] bg-apm-pink text-white font-extrabold px-1.5 py-0.5 rounded">OPORTUNIDADE</span>
                   </div>
-                  <div class="w-full h-24 rounded-xl bg-gradient-to-br from-pink-950/40 to-purple-950/40 flex items-center justify-center text-3xl mb-2 relative overflow-hidden">
-                    <span>👗</span>
-                    <div class="absolute inset-0 bg-apm-pink/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  </div>
-                  <div>
-                    <span class="text-[9px] font-bold text-apm-gold tracking-widest uppercase block">Moda Feminina</span>
-                    <h4 class="text-xs font-bold text-white line-clamp-1">Vestido Midi Elegante</h4>
-                    <p class="text-[10px] text-apm-pink font-extrabold mt-0.5">Cupom Ativo ✓</p>
+                  <div class="mt-2.5">
+                    <p class="text-[10px] text-apm-pink font-extrabold uppercase tracking-wider">Perfumes & Skincare</p>
+                    <p class="text-xs font-bold text-white truncate">Importados & Nacionais</p>
+                    <p class="text-[11px] text-apm-gold font-extrabold mt-1">Cupons Exclusivos</p>
                   </div>
                 </div>
 
-                <!-- Product Tile 2: Beleza & Skincare -->
-                <div class="bg-apm-darkPlum/90 rounded-2xl p-3 border border-apm-border flex flex-col justify-between relative group hover:border-apm-pink/60 transition-colors">
-                  <div class="absolute top-2 right-2 bg-apm-gold text-black text-[9px] font-extrabold px-1.5 py-0.5 rounded shadow">
-                    VIRAL
+                <!-- Item 2: Moda & Looks -->
+                <div class="bg-apm-black/80 rounded-2xl p-3.5 border border-apm-border/60 hover:border-apm-pink/40 transition-colors group">
+                  <div class="h-28 rounded-xl bg-gradient-to-tr from-pink-950/50 to-rose-900/40 p-3 flex items-center justify-center relative overflow-hidden">
+                    <span class="text-4xl transform group-hover:scale-110 transition-transform">👗</span>
+                    <span class="absolute top-2 right-2 text-[9px] bg-apm-gold text-apm-black font-black px-1.5 py-0.5 rounded">ACHADINHO</span>
                   </div>
-                  <div class="w-full h-24 rounded-xl bg-gradient-to-br from-purple-950/40 to-pink-950/40 flex items-center justify-center text-3xl mb-2 relative overflow-hidden">
-                    <span>💄</span>
-                  </div>
-                  <div>
-                    <span class="text-[9px] font-bold text-apm-pink tracking-widest uppercase block">Beleza & Gloss</span>
-                    <h4 class="text-xs font-bold text-white line-clamp-1">Kit Skincare & Glow</h4>
-                    <p class="text-[10px] text-apm-gold font-extrabold mt-0.5">Menor Preço Detectado</p>
+                  <div class="mt-2.5">
+                    <p class="text-[10px] text-apm-pink font-extrabold uppercase tracking-wider">Moda & Tendências</p>
+                    <p class="text-xs font-bold text-white truncate">Vestidos & Conjuntos</p>
+                    <p class="text-[11px] text-apm-gold font-extrabold mt-1">Garimpado de Hoje</p>
                   </div>
                 </div>
 
-                <!-- Product Tile 3: Acessórios -->
-                <div class="bg-apm-darkPlum/90 rounded-2xl p-3 border border-apm-border flex flex-col justify-between relative group hover:border-apm-pink/60 transition-colors">
-                  <div class="w-full h-20 rounded-xl bg-gradient-to-br from-amber-950/30 to-purple-950/30 flex items-center justify-center text-3xl mb-2">
-                    <span>👜</span>
+                <!-- Item 3: Bolsas & Acessórios -->
+                <div class="bg-apm-black/80 rounded-2xl p-3.5 border border-apm-border/60 hover:border-apm-pink/40 transition-colors group">
+                  <div class="h-28 rounded-xl bg-gradient-to-tr from-amber-950/40 to-pink-900/30 p-3 flex items-center justify-center relative overflow-hidden">
+                    <span class="text-4xl transform group-hover:scale-110 transition-transform">👜</span>
                   </div>
-                  <div>
-                    <span class="text-[9px] font-bold text-apm-gray tracking-widest uppercase block">Acessórios</span>
-                    <h4 class="text-xs font-bold text-white line-clamp-1">Bolsa Crossbody Chic</h4>
-                  </div>
-                </div>
-
-                <!-- Product Tile 4: Perfumaria -->
-                <div class="bg-apm-darkPlum/90 rounded-2xl p-3 border border-apm-border flex flex-col justify-between relative group hover:border-apm-pink/60 transition-colors">
-                  <div class="w-full h-20 rounded-xl bg-gradient-to-br from-pink-950/30 to-rose-950/30 flex items-center justify-center text-3xl mb-2">
-                    <span>🌸</span>
-                  </div>
-                  <div>
-                    <span class="text-[9px] font-bold text-apm-pink tracking-widest uppercase block">Perfumaria</span>
-                    <h4 class="text-xs font-bold text-white line-clamp-1">Body Splash & Body Care</h4>
+                  <div class="mt-2.5">
+                    <p class="text-[10px] text-apm-pink font-extrabold uppercase tracking-wider">Bolsas & Óculos</p>
+                    <p class="text-xs font-bold text-white truncate">Acessórios Essenciais</p>
+                    <p class="text-[11px] text-apm-gold font-extrabold mt-1">Preço Encantador</p>
                   </div>
                 </div>
 
-              </div>
+                <!-- Item 4: Casa & Organização -->
+                <div class="bg-apm-black/80 rounded-2xl p-3.5 border border-apm-border/60 hover:border-apm-pink/40 transition-colors group">
+                  <div class="h-28 rounded-xl bg-gradient-to-tr from-fuchsia-950/40 to-pink-950/40 p-3 flex items-center justify-center relative overflow-hidden">
+                    <span class="text-4xl transform group-hover:scale-110 transition-transform">💄</span>
+                  </div>
+                  <div class="mt-2.5">
+                    <p class="text-[10px] text-apm-pink font-extrabold uppercase tracking-wider">Beleza & Virais</p>
+                    <p class="text-xs font-bold text-white truncate">Make, Cabelo & Unhas</p>
+                    <p class="text-[11px] text-apm-gold font-extrabold mt-1">Achados do TikTok</p>
+                  </div>
+                </div>
 
-              <!-- Footer Note -->
-              <div class="bg-apm-black/80 rounded-xl p-2.5 border border-apm-border/60 text-center">
-                <p class="text-[10px] text-apm-gray font-medium">
-                  ✦ Curadoria constante de <strong class="text-white">oportunidades reais</strong> no seu WhatsApp.
-                </p>
               </div>
 
             </div>
 
             <!-- Floating Badge 1 (Top Left) -->
-            <div class="absolute -top-5 -left-6 bg-apm-card border border-apm-pink/60 p-3 rounded-2xl shadow-2xl flex items-center gap-3 animate-float-slow backdrop-blur-xl">
-              <div class="w-9 h-9 rounded-xl bg-apm-pink text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-apm-pink/30">
-                🔎
+            <div class="absolute -top-5 -left-6 bg-apm-card border border-apm-pink/60 p-2.5 sm:p-3 rounded-2xl shadow-2xl flex items-center gap-3 animate-float-slow backdrop-blur-xl">
+              <div class="w-10 h-10 rounded-full bg-apm-black border border-apm-pink/60 p-0.5 shadow-md shadow-apm-pink/30 shrink-0 flex items-center justify-center">
+                <svg class="w-full h-full" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="250" cy="250" r="245" fill="#08050B"/>
+                  <path d="M196 82 C178 82 153 92 135 120 C148 116 168 118 180 128 C192 138 188 152 181 165 C172 180 152 195 152 201 Z" fill="#FF2A85"/>
+                  <path d="M215 90 L285 90 L318 182 L198 190 Z" stroke="#FF2A85" stroke-width="14" fill="none"/>
+                  <path d="M72 280 L140 172 L208 280 H168 L140 230 L112 280 H72 Z" fill="#FFFFFF"/>
+                  <path d="M186 172 H242 C265 172 282 188 282 208 C282 228 265 244 242 244 H216 V280 H186 V172 Z" fill="#FFFFFF"/>
+                  <path d="M276 172 H310 L336 230 L362 172 H396 V280 H368 V222 L345 272 H327 L304 222 V280 H276 V172 Z" fill="#FF2A85"/>
+                </svg>
               </div>
               <div>
                 <p class="text-[9px] text-apm-gray font-bold tracking-wider uppercase">GARIMPO APM</p>
@@ -385,810 +364,700 @@
             </div>
 
             <!-- Floating Badge 2 (Bottom Right) -->
-            <div class="absolute -bottom-5 -right-4 bg-apm-card border border-apm-gold/60 p-3 rounded-2xl shadow-2xl flex items-center gap-3 animate-float-slow backdrop-blur-xl" style="animation-delay: 2.5s;">
-              <div class="w-9 h-9 rounded-xl bg-apm-gold/20 text-apm-gold border border-apm-gold/40 flex items-center justify-center font-extrabold text-base">
-                ✨
+            <div class="absolute -bottom-6 -right-4 bg-apm-card border border-apm-gold/60 p-3 rounded-2xl shadow-2xl flex items-center gap-3 animate-float-delayed backdrop-blur-xl">
+              <div class="w-9 h-9 rounded-full bg-apm-gold/20 flex items-center justify-center text-apm-gold font-black text-lg">
+                🏷️
               </div>
               <div>
-                <p class="text-[9px] text-apm-gray font-bold tracking-wider uppercase">CURADORIA EXCLUSIVA</p>
-                <p class="text-xs font-extrabold text-white">Do Look ao Acessório</p>
+                <p class="text-[9px] text-apm-gold font-extrabold tracking-wider uppercase">CURADORIA ATIVA</p>
+                <p class="text-xs font-bold text-white">Cupons & Oportunidades</p>
               </div>
             </div>
 
           </div>
 
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BARRA DE BENEFÍCIOS E PILARES DE CONFIANÇA -->
-  <section class="py-6 bg-apm-darkPlum border-y border-apm-border/80 relative z-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-        
-        <div class="flex items-center justify-center sm:justify-start gap-3.5 p-3.5 rounded-xl bg-apm-card/50 border border-apm-border/50">
-          <span class="text-2xl">🔎</span>
-          <div>
-            <h4 class="text-xs font-extrabold text-white tracking-wide">ACHADINHO SELECIONADOS</h4>
-            <p class="text-[10px] text-apm-gray">Curadoria com critério</p>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center sm:justify-start gap-3.5 p-3.5 rounded-xl bg-apm-card/50 border border-apm-border/50">
-          <span class="text-2xl">🏷️</span>
-          <div>
-            <h4 class="text-xs font-extrabold text-white tracking-wide">OFERTAS E CUPONS</h4>
-            <p class="text-[10px] text-apm-gray">Oportunidades verificadas</p>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center sm:justify-start gap-3.5 p-3.5 rounded-xl bg-apm-card/50 border border-apm-border/50">
-          <span class="text-2xl">💰</span>
-          <div>
-            <h4 class="text-xs font-extrabold text-white tracking-wide">MAIS ECONOMIA</h4>
-            <p class="text-[10px] text-apm-gray">Sem perder tempo</p>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center sm:justify-start gap-3.5 p-3.5 rounded-xl bg-apm-card/50 border border-apm-border/50">
-          <span class="text-2xl">📲</span>
-          <div>
-            <h4 class="text-xs font-extrabold text-white tracking-wide">TUDO NO WHATSAPP</h4>
-            <p class="text-[10px] text-apm-gray">Notificações práticas</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO — O QUE É O APM? ("VOCÊ NÃO PRECISA PROCURAR. A GENTE GARIMPA.") -->
-  <section id="conceito" class="py-20 relative overflow-hidden reveal-on-scroll">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-apm-pink font-extrabold text-xs tracking-widest uppercase mb-3 block">
-          CONCEITO DE CURADORIA DA MARCA
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-6">
-          Você não precisa procurar. <br />
-          <span class="text-gradient-pink italic font-editorial font-normal">A gente garimpa.</span>
-        </h2>
-        <p class="text-base sm:text-lg text-apm-gray font-normal leading-relaxed">
-          Existem milhares de lojas, produtos e promoções espalhados pela internet. O problema não é encontrar alguma coisa. O problema é encontrar aquilo que realmente vale a pena.
-        </p>
-      </div>
-
-      <!-- Feature Concept Highlight Box -->
-      <div class="bg-gradient-to-b from-apm-card via-apm-darkPlum to-apm-card rounded-3xl p-8 sm:p-12 border border-apm-border relative overflow-hidden shadow-2xl">
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-apm-pink/10 blur-[100px] rounded-full pointer-events-none"></div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <!-- FAIXA DE BENEFÍCIOS ELEGANTE -->
+    <section class="border-y border-apm-border/80 bg-apm-black/80 py-8 relative z-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
           
-          <div class="lg:col-span-8">
-            <span class="text-xs font-bold text-apm-gold tracking-widest uppercase block mb-2">AGORA POUPE MAIS • UNIVERSO FEMININO</span>
-            <p class="text-base sm:text-lg text-apm-grayLight leading-relaxed mb-6">
-              É aí que entra o <strong class="text-white font-extrabold">Agora Poupe Mais</strong>. Na vertente <strong class="text-apm-pink font-extrabold">Universo Feminino</strong>, nosso foco é garimpar oportunidades para diferentes momentos, estilos e necessidades da mulher moderna.
-            </p>
-
-            <!-- Visual Statement Banner -->
-            <div class="p-5 rounded-2xl bg-apm-black/80 border-l-4 border-apm-pink border-y border-r border-apm-border">
-              <span class="text-xs font-bold text-apm-pink uppercase tracking-widest block mb-1">PROMESSA CENTRAL</span>
-              <p class="text-xl sm:text-2xl font-black text-white tracking-tight">
-                "DO LOOK COMPLETO AO PEQUENO DETALHE."
-              </p>
-            </div>
-          </div>
-
-          <!-- 3 Value Pillars -->
-          <div class="lg:col-span-4 flex flex-col gap-3.5">
-            <div class="p-4 rounded-2xl bg-apm-black/60 border border-apm-border flex items-center gap-3.5">
-              <span class="w-11 h-11 rounded-xl bg-apm-pink/20 text-apm-pink flex items-center justify-center font-extrabold shrink-0 text-base">01</span>
-              <div>
-                <h4 class="text-sm font-extrabold text-white">VOCÊ ECONOMIZA TEMPO</h4>
-                <p class="text-xs text-apm-gray">Sem precisar varrer dezenas de sites.</p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-apm-black/60 border border-apm-border flex items-center gap-3.5">
-              <span class="w-11 h-11 rounded-xl bg-apm-gold/20 text-apm-gold flex items-center justify-center font-extrabold shrink-0 text-base">02</span>
-              <div>
-                <h4 class="text-sm font-extrabold text-white">VOCÊ DESCUBRA PRODUTOS</h4>
-                <p class="text-xs text-apm-gray">Achadinhos úteis e surpreendentes.</p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-apm-black/60 border border-apm-border flex items-center gap-3.5">
-              <span class="w-11 h-11 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center font-extrabold shrink-0 text-base">03</span>
-              <div>
-                <h4 class="text-sm font-extrabold text-white">VOCÊ DECIDE O QUE VALE</h4>
-                <p class="text-xs text-apm-gray">Sem nenhuma pressão de compra.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO — UM UNIVERSO INTEIRO PARA ELA (CATEGORIAS ABRANGENTES) -->
-  <section id="categorias" class="py-20 bg-apm-darkPlum/70 border-t border-apm-border relative reveal-on-scroll">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-apm-gold font-extrabold text-xs tracking-widest uppercase mb-2 block">
-          VARIEDADE COMPLETA
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4">
-          Muito além de roupas.
-        </h2>
-        <p class="text-base text-apm-gray">
-          O APM | Universo Feminino não se limita ao guarda-roupa. Trazemos curadoria para cada detalhe da sua rotina.
-        </p>
-      </div>
-
-      <!-- Category Grid (8 Categories Editorial Style) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Category 1: Moda -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between relative overflow-hidden group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-apm-black border border-apm-border flex items-center justify-center text-3xl mb-5 shadow-inner">
-              👗
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2 flex items-center justify-between">
-              <span>MODA</span>
-              <span class="text-[10px] text-apm-pink font-semibold bg-apm-pink/10 px-2 py-0.5 rounded border border-apm-pink/20">Looks</span>
-            </h3>
-            <p class="text-xs text-apm-gray leading-relaxed mb-4">
-              Vestidos, blusas, calças, conjuntos, moda fitness, moda íntima, pijamas e peças para todas as ocasiões.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-apm-border/60 text-[11px] font-bold text-apm-grayLight flex items-center justify-between">
-            <span>Do look completo...</span>
-            <span class="text-apm-pink">✓ Garimpado</span>
-          </div>
-        </div>
-
-        <!-- Category 2: Calçados -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between relative overflow-hidden group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-apm-black border border-apm-border flex items-center justify-center text-3xl mb-5 shadow-inner">
-              👟
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2 flex items-center justify-between">
-              <span>CALÇADOS</span>
-              <span class="text-[10px] text-apm-gold font-semibold bg-apm-gold/10 px-2 py-0.5 rounded border border-apm-gold/20">Estilo</span>
-            </h3>
-            <p class="text-xs text-apm-gray leading-relaxed mb-4">
-              Tênis casuais e esportivos, sandálias, botas, rasteirinhas, chinelos e calçados confortáveis.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-apm-border/60 text-[11px] font-bold text-apm-grayLight flex items-center justify-between">
-            <span>Para cada passo...</span>
-            <span class="text-apm-gold">✓ Oportunidade</span>
-          </div>
-        </div>
-
-        <!-- Category 3: Bolsas & Acessórios -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between relative overflow-hidden group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-apm-black border border-apm-border flex items-center justify-center text-3xl mb-5 shadow-inner">
-              👜
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2 flex items-center justify-between">
-              <span>BOLSAS & ACESSÓRIOS</span>
-              <span class="text-[10px] text-white font-semibold bg-white/10 px-2 py-0.5 rounded border border-white/20">Detalhes</span>
-            </h3>
-            <p class="text-xs text-apm-gray leading-relaxed mb-4">
-              Bolsas, carteiras, óculos de sol, relógios, brincos, colares, anéis e acessórios de cabelo.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-apm-border/60 text-[11px] font-bold text-apm-grayLight flex items-center justify-between">
-            <span>...ao menor acessório</span>
-            <span class="text-white">✓ Seleção</span>
-          </div>
-        </div>
-
-        <!-- Category 4: Beleza -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between relative overflow-hidden group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-apm-black border border-apm-border flex items-center justify-center text-3xl mb-5 shadow-inner">
-              💄
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2 flex items-center justify-between">
-              <span>BELEZA</span>
-              <span class="text-[10px] text-apm-pink font-semibold bg-apm-pink/10 px-2 py-0.5 rounded border border-apm-pink/20">Skincare</span>
-            </h3>
-            <p class="text-xs text-apm-gray leading-relaxed mb-4">
-              Maquiagem, rotina de skincare, cuidados capilares, produtos para unhas e ferramentas de autocuidado.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-apm-border/60 text-[11px] font-bold text-apm-grayLight flex items-center justify-between">
-            <span>Autocuidado diário</span>
-            <span class="text-apm-pink">✓ Cupons</span>
-          </div>
-        </div>
-
-        <!-- Category 5: Perfumes -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between relative overflow-hidden group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-apm-black border border-apm-border flex items-center justify-center text-3xl mb-5 shadow-inner">
-              🌸
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2">PERFUMES</h3>
-            <p class="text-xs text-apm-gray leading-relaxed mb-4">
-              Perfumes nacionais e importados, body splash, óleos corporais, hidratantes e fragrâncias marcantes.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-apm-border/60 text-[11px] font-bold text-apm-grayLight flex items-center justify-between">
-            <span>Fragrâncias únicas</span>
-            <span class="text-apm-gold">✓ Promoções</span>
-          </div>
-        </div>
-
-        <!-- Category 6: Casa & Organização -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between relative overflow-hidden group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-apm-black border border-apm-border flex items-center justify-center text-3xl mb-5 shadow-inner">
-              🏠
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2">CASA & ORGANIZAÇÃO</h3>
-            <p class="text-xs text-apm-gray leading-relaxed mb-4">
-              Decoração, organizadores de acrílico, utilidades inteligentes para o lar e praticidade para o dia a dia.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-apm-border/60 text-[11px] font-bold text-apm-grayLight flex items-center justify-between">
-            <span>Para o seu lar</span>
-            <span class="text-emerald-400">✓ Praticidade</span>
-          </div>
-        </div>
-
-        <!-- Category 7: Presentes -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between relative overflow-hidden group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-apm-black border border-apm-border flex items-center justify-center text-3xl mb-5 shadow-inner">
-              🎁
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2">PRESENTES</h3>
-            <p class="text-xs text-apm-gray leading-relaxed mb-4">
-              Ideias criativas e especiais para surpreender amigas, familiares ou se presentear em qualquer ocasião.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-apm-border/60 text-[11px] font-bold text-apm-grayLight flex items-center justify-between">
-            <span>Inspiração pura</span>
-            <span class="text-apm-pink">✓ Ideias</span>
-          </div>
-        </div>
-
-        <!-- Category 8: Achadinhos Virais -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between relative overflow-hidden group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-apm-black border border-apm-border flex items-center justify-center text-3xl mb-5 shadow-inner">
-              🔥
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2 flex items-center justify-between">
-              <span>ACHADINHOS VIRAIS</span>
-              <span class="text-[10px] text-apm-pink font-semibold bg-apm-pink/10 px-2 py-0.5 rounded">Em alta</span>
-            </h3>
-            <p class="text-xs text-apm-gray leading-relaxed mb-4">
-              Produtos úteis, diferentes, inesperados e que estão bombando nas redes sociais com ótimos preços.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-apm-border/60 text-[11px] font-bold text-apm-grayLight flex items-center justify-between">
-            <span>Tendências das redes</span>
-            <span class="text-apm-pink">✓ Descobertas</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Section CTA Button -->
-      <div class="text-center mt-12">
-        <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 bg-gradient-to-r from-apm-pink to-pink-600 hover:from-apm-pinkHover hover:to-pink-700 text-white font-extrabold px-8 py-3.5 rounded-full shadow-lg shadow-apm-pink/25 transition-all hover:scale-105 text-sm">
-          <span>QUERO ACOMPANHAR ESSES ACHADINHOS</span>
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO VISUAL DE DESEJO ("ÀS VEZES VOCÊ ENTRA PROCURANDO UMA COISA...") -->
-  <section class="py-20 relative overflow-hidden reveal-on-scroll">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-apm-pink font-extrabold text-xs tracking-widest uppercase mb-3 block">
-          A MAGIA DO GARIMPO
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4">
-          Às vezes você entra procurando uma coisa...
-        </h2>
-        <p class="text-2xl sm:text-4xl font-editorial italic text-gradient-pink font-normal">
-          ...e encontra cinco que nem sabia que queria.
-        </p>
-      </div>
-
-      <!-- Visual Composition Showcase Grid -->
-      <div class="bg-gradient-to-tr from-apm-black via-apm-card to-apm-darkPlum border border-apm-border/80 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
-        
-        <!-- Floating Visual Tag Elements -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-          
-          <div class="bg-apm-darkPlum/90 p-5 rounded-2xl border border-apm-pink/30 flex flex-col items-center text-center relative group hover:scale-105 transition-transform">
-            <span class="absolute -top-3 -right-2 bg-apm-pink text-white text-[9px] font-black px-2 py-0.5 rounded-full">🏷️ Cupom</span>
-            <span class="text-4xl mb-2">🕶️</span>
-            <h4 class="text-xs font-bold text-white">Óculos Estilo Retro</h4>
-            <p class="text-[10px] text-apm-gold font-extrabold mt-1">Achadinho VIP</p>
-          </div>
-
-          <div class="bg-apm-darkPlum/90 p-5 rounded-2xl border border-apm-gold/30 flex flex-col items-center text-center relative group hover:scale-105 transition-transform">
-            <span class="absolute -top-3 -right-2 bg-apm-gold text-black text-[9px] font-black px-2 py-0.5 rounded-full">💗 Queridinho</span>
-            <span class="text-4xl mb-2">✨</span>
-            <h4 class="text-xs font-bold text-white">Iluminador Facial Glow</h4>
-            <p class="text-[10px] text-apm-pink font-extrabold mt-1">Aprovação Máxima</p>
-          </div>
-
-          <div class="bg-apm-darkPlum/90 p-5 rounded-2xl border border-purple-500/30 flex flex-col items-center text-center relative group hover:scale-105 transition-transform">
-            <span class="absolute -top-3 -right-2 bg-purple-600 text-white text-[9px] font-black px-2 py-0.5 rounded-full">🛍️ Prático</span>
-            <span class="text-4xl mb-2">💎</span>
-            <h4 class="text-xs font-bold text-white">Porta-Jóias de Viagem</h4>
-            <p class="text-[10px] text-purple-300 font-extrabold mt-1">Organização Chic</p>
-          </div>
-
-          <div class="bg-apm-darkPlum/90 p-5 rounded-2xl border border-emerald-500/30 flex flex-col items-center text-center relative group hover:scale-105 transition-transform">
-            <span class="absolute -top-3 -right-2 bg-emerald-500 text-black text-[9px] font-black px-2 py-0.5 rounded-full">⭐ Viral</span>
-            <span class="text-4xl mb-2">🪮</span>
-            <h4 class="text-xs font-bold text-white">Escova Secadora Modeladora</h4>
-            <p class="text-[10px] text-emerald-400 font-extrabold mt-1">Oportunidade</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO — COMO FUNCIONA (4 PASSOS VISUAIS) -->
-  <section id="como-funciona" class="py-20 bg-apm-darkPlum/80 border-y border-apm-border reveal-on-scroll">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-apm-gold font-extrabold text-xs tracking-widest uppercase mb-2 block">
-          FLUXO SIMPLES E TRANSPARENTE
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4">
-          Como funciona o garimpo APM?
-        </h2>
-        <p class="text-base text-apm-gray">
-          Quatro etapas pensadas para levar praticidade sem lotar sua rotina.
-        </p>
-      </div>
-
-      <!-- Process Diagram Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative max-w-6xl mx-auto">
-        
-        <!-- Step 1 -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border flex flex-col items-center text-center relative">
-          <div class="w-14 h-14 rounded-2xl bg-apm-pink/20 border border-apm-pink/40 text-apm-pink flex items-center justify-center font-black text-2xl mb-4 shadow-lg">
-            🔎
-          </div>
-          <span class="text-[10px] font-extrabold text-apm-pink tracking-widest uppercase mb-1">Passo 01</span>
-          <h3 class="font-extrabold text-white text-base mb-2">A GENTE GARIMPA</h3>
-          <p class="text-xs text-apm-gray leading-relaxed">
-            Monitoramos e buscamos ofertas, cupons e achadinhos incríveis na internet.
-          </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border flex flex-col items-center text-center relative">
-          <div class="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-500/40 text-purple-300 flex items-center justify-center font-black text-2xl mb-4 shadow-lg">
-            🧠
-          </div>
-          <span class="text-[10px] font-extrabold text-purple-300 tracking-widest uppercase mb-1">Passo 02</span>
-          <h3 class="font-extrabold text-white text-base mb-2">A GENTE SELECIONA</h3>
-          <p class="text-xs text-apm-gray leading-relaxed">
-            Filtramos apenas o que realmente vale a pena para o universo feminino.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border flex flex-col items-center text-center relative">
-          <div class="w-14 h-14 rounded-2xl bg-apm-gold/20 border border-apm-gold/40 text-apm-gold flex items-center justify-center font-black text-2xl mb-4 shadow-lg">
-            📲
-          </div>
-          <span class="text-[10px] font-extrabold text-apm-gold tracking-widest uppercase mb-1">Passo 03</span>
-          <h3 class="font-extrabold text-white text-base mb-2">VOCÊ RECEBE</h3>
-          <p class="text-xs text-apm-gray leading-relaxed">
-            As melhores oportunidades chegam organizadas direto no grupo do WhatsApp.
-          </p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="bg-apm-card p-6 rounded-3xl border border-apm-border flex flex-col items-center text-center relative">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center font-black text-2xl mb-4 shadow-lg">
-            💗
-          </div>
-          <span class="text-[10px] font-extrabold text-emerald-400 tracking-widest uppercase mb-1">Passo 04</span>
-          <h3 class="font-extrabold text-white text-base mb-2">VOCÊ DECIDE</h3>
-          <p class="text-xs text-apm-gray leading-relaxed">
-            Se fizer sentido, aproveite a oferta. Se não, simplesmente ignore.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO — POR QUE ENTRAR? (6 CARDS DE BENEFÍCIOS REAIS) -->
-  <section class="py-20 relative reveal-on-scroll">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-apm-pink font-extrabold text-xs tracking-widest uppercase mb-3 block">
-          PRATICIDADE NO SEU DIA A DIA
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4">
-          Porque procurar tudo sozinha dá trabalho.
-        </h2>
-        <p class="text-base text-apm-gray">
-          Seis motivos para deixar o garimpo por conta da equipe do Agora Poupe Mais.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Pillar 1 -->
-        <div class="bg-apm-card p-7 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-apm-pink/20 text-apm-pink flex items-center justify-center text-2xl mb-5">
-              ⏱️
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2">ECONOMIZE TEMPO</h3>
-            <p class="text-xs text-apm-gray leading-relaxed">
-              Não precisa ficar horas navegando em dezenas de e-commerces e sites buscando pechinchas.
-            </p>
-          </div>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div class="bg-apm-card p-7 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-2xl mb-5">
+          <div class="flex flex-col md:flex-row items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-apm-wine/80 border border-apm-pink/40 flex items-center justify-center text-xl text-apm-pink shrink-0">
               🔎
             </div>
-            <h3 class="font-extrabold text-white text-lg mb-2">DESCUBRA ACHADOS</h3>
-            <p class="text-xs text-apm-gray leading-relaxed">
-              Encontre produtos úteis e apaixonantes que talvez passassem completamente despercebidos.
-            </p>
+            <div>
+              <h4 class="text-sm font-extrabold text-white">Achadinhos Selecionados</h4>
+              <p class="text-xs text-apm-gray mt-0.5">Filtrados com carinho</p>
+            </div>
           </div>
-        </div>
 
-        <!-- Pillar 3 -->
-        <div class="bg-apm-card p-7 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-apm-gold/20 text-apm-gold flex items-center justify-center text-2xl mb-5">
+          <div class="flex flex-col md:flex-row items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-apm-wine/80 border border-apm-pink/40 flex items-center justify-center text-xl text-apm-pink shrink-0">
+              🏷️
+            </div>
+            <div>
+              <h4 class="text-sm font-extrabold text-white">Ofertas e Cupons</h4>
+              <p class="text-xs text-apm-gray mt-0.5">Oportunidades reais</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-apm-wine/80 border border-apm-pink/40 flex items-center justify-center text-xl text-apm-pink shrink-0">
               💰
             </div>
-            <h3 class="font-extrabold text-white text-lg mb-2">ECONOMIZE DINHEIRO</h3>
-            <p class="text-xs text-apm-gray leading-relaxed">
-              Acompanhe oportunidades, descarte preços cheios e aproveite cupons e descontos reais.
-            </p>
+            <div>
+              <h4 class="text-sm font-extrabold text-white">Mais Economia</h4>
+              <p class="text-xs text-apm-gray mt-0.5">Preços que encantam</p>
+            </div>
           </div>
-        </div>
 
-        <!-- Pillar 4 -->
-        <div class="bg-apm-card p-7 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-5">
+          <div class="flex flex-col md:flex-row items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-apm-wine/80 border border-apm-pink/40 flex items-center justify-center text-xl text-apm-pink shrink-0">
               📲
             </div>
-            <h3 class="font-extrabold text-white text-lg mb-2">RECEBA NO WHATSAPP</h3>
-            <p class="text-xs text-apm-gray leading-relaxed">
-              Tudo chega com praticidade na palma da sua mão, no aplicativo que você já usa todos os dias.
-            </p>
-          </div>
-        </div>
-
-        <!-- Pillar 5 -->
-        <div class="bg-apm-card p-7 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-300 flex items-center justify-center text-2xl mb-5">
-              💗
+            <div>
+              <h4 class="text-sm font-extrabold text-white">Tudo no WhatsApp</h4>
+              <p class="text-xs text-apm-gray mt-0.5">Direto na sua tela</p>
             </div>
-            <h3 class="font-extrabold text-white text-lg mb-2">DESCUBRA TENDÊNCIAS</h3>
-            <p class="text-xs text-apm-gray leading-relaxed">
-              Fique por dentro de produtos virais, novidades e itens desejados do momento.
-            </p>
           </div>
-        </div>
 
-        <!-- Pillar 6 -->
-        <div class="bg-apm-card p-7 rounded-3xl border border-apm-border glass-card-hover flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-2xl mb-5">
-              🛍️
-            </div>
-            <h3 class="font-extrabold text-white text-lg mb-2">UM UNIVERSO INTEIRO</h3>
-            <p class="text-xs text-apm-gray leading-relaxed">
-              Variedade real: do vestuário ao produto de autocuidado e itens para facilitar a rotina de casa.
-            </p>
-          </div>
         </div>
-
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- SEÇÃO DE CONFIANÇA & ZERO SPAM -->
-  <section class="py-20 bg-apm-darkPlum/60 border-t border-apm-border reveal-on-scroll">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="bg-gradient-to-r from-apm-card via-apm-darkPlum to-apm-card rounded-3xl p-8 sm:p-14 border border-apm-border relative overflow-hidden shadow-2xl">
+    <!-- SEÇÃO: O QUE É O APM? -->
+    <section class="py-20 sm:py-28 relative overflow-hidden bg-apm-black reveal-on-scroll">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <span class="text-xs font-black text-apm-pink uppercase tracking-widest bg-apm-pink/10 border border-apm-pink/30 px-4 py-1.5 rounded-full">
+          CONCEITO DE CURADORIA
+        </span>
+
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-6 mb-8 tracking-tight">
+          Você não precisa procurar. <br class="hidden sm:inline"/>
+          <span class="text-gradient-pink">A gente garimpa.</span>
+        </h2>
+
+        <div class="space-y-4 text-base sm:text-lg text-apm-grayLight/90 max-w-3xl mx-auto leading-relaxed">
+          <p>
+            Existem milhares de lojas, produtos e promoções espalhados pela internet todos os dias. O problema quase nunca é encontrar alguma coisa... <strong class="text-white">o problema é encontrar aquilo que realmente vale a pena.</strong>
+          </p>
+          <p>
+            É aí que entra o <strong class="text-white">Agora Poupe Mais</strong>.
+          </p>
+          <p class="text-apm-pink font-semibold">
+            Na versão Universo Feminino, nosso foco é garimpar oportunidades para diferentes momentos, estilos e necessidades da mulher moderna.
+          </p>
+        </div>
+
+        <!-- TRIO DE PILARES DE VALOR -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14 text-left">
           
-          <div class="lg:col-span-7">
-            <span class="text-apm-pink font-extrabold text-xs tracking-widest uppercase mb-3 block">
-              RESPEITO AO SEU TEMPO
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6 leading-tight">
-              Não é sobre postar tudo. <br />
-              <span class="text-gradient-pink">É sobre encontrar o que vale a pena.</span>
-            </h2>
-            <p class="text-base text-apm-gray leading-relaxed mb-6">
-              O objetivo do <strong class="text-white">Agora Poupe Mais</strong> não é transformar seu WhatsApp em uma vitrine infinita de produtos irrelevantes. Nossa meta é manter uma seleção focada naquilo que realmente agrega estilo, praticidade ou economia para você.
-            </p>
-            <p class="text-sm font-semibold text-white bg-apm-black/80 p-4 rounded-2xl border border-apm-border inline-block">
-              ✦ Menos barulho no seu celular. Mais curadoria e achadinhos de verdade.
+          <div class="glass-card p-6 sm:p-8 rounded-3xl relative overflow-hidden">
+            <div class="text-3xl mb-4">⏱️</div>
+            <h3 class="text-lg font-extrabold text-white mb-2">VOCÊ ECONOMIZA TEMPO</h3>
+            <p class="text-sm text-apm-gray leading-relaxed">
+              Esqueça abrir dezenas de abas ou pesquisar sem parar. Trazemos tudo pronto para você.
             </p>
           </div>
 
-          <!-- COMPARISON BOX -->
-          <div class="lg:col-span-5 bg-apm-black/90 p-6 rounded-2xl border border-apm-border flex flex-col gap-4">
-            <h4 class="text-xs font-extrabold text-white uppercase tracking-wider pb-3 border-b border-apm-border">
-              Diferencial da curadoria APM
-            </h4>
+          <div class="glass-card p-6 sm:p-8 rounded-3xl relative overflow-hidden border-apm-pink/50">
+            <div class="text-3xl mb-4">💎</div>
+            <h3 class="text-lg font-extrabold text-white mb-2">VOCÊ DESCOBRE PRODUTOS</h3>
+            <p class="text-sm text-apm-gray leading-relaxed">
+              Achadinhos úteis, virais e novidades que passariam completamente despercebidos.
+            </p>
+          </div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-3xl relative overflow-hidden">
+            <div class="text-3xl mb-4">💗</div>
+            <h3 class="text-lg font-extrabold text-white mb-2">VOCÊ DECIDE O QUE VALE A PENA</h3>
+            <p class="text-sm text-apm-gray leading-relaxed">
+              Receba no WhatsApp com total liberdade. Gostou? Aproveite. Não gostou? Apenas ignore.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO: UM UNIVERSO INTEIRO PARA ELA -->
+    <section class="py-20 sm:py-28 bg-gradient-to-b from-apm-black via-apm-darkPlum to-apm-black border-t border-apm-border/60 relative reveal-on-scroll">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-black text-apm-gold uppercase tracking-widest bg-apm-gold/10 border border-apm-gold/30 px-4 py-1.5 rounded-full">
+            ABRANGÊNCIA COMPLETA
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-6 mb-4 tracking-tight">
+            Muito além de <span class="text-gradient-pink">roupas.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-apm-gray">
+            Criamos uma curadoria pensada para cobrir todos os detalhes do seu estilo de vida.
+          </p>
+        </div>
+
+        <!-- GRADE EDITORIAL DE CATEGORIAS (8 CARDS) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1: Moda -->
+          <div class="glass-card p-6 rounded-3xl transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-apm-pink/10 border border-apm-pink/30 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+              👗
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-2">MODA</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Vestidos, blusas, calças, conjuntos, moda fitness, pijamas e peças essenciais para o seu guarda-roupa.
+            </p>
+          </div>
+
+          <!-- Card 2: Calçados -->
+          <div class="glass-card p-6 rounded-3xl transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-apm-pink/10 border border-apm-pink/30 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+              👟
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-2">CALÇADOS</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Tênis casuais e esportivos, sandálias confortáveis, botas, chinelos e saltos elegantes.
+            </p>
+          </div>
+
+          <!-- Card 3: Bolsas & Acessórios -->
+          <div class="glass-card p-6 rounded-3xl transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-apm-pink/10 border border-apm-pink/30 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+              👜
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-2">BOLSAS & ACESSÓRIOS</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Bolsas de mão e tiracolo, carteiras, óculos de sol, relógios, brincos, colares e anéis.
+            </p>
+          </div>
+
+          <!-- Card 4: Beleza -->
+          <div class="glass-card p-6 rounded-3xl transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-apm-pink/10 border border-apm-pink/30 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+              💄
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-2">BELEZA</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Maquiagens desejadas, produtos de skincare, cuidados com os cabelos, unhas e rotina de autocuidado.
+            </p>
+          </div>
+
+          <!-- Card 5: Perfumes -->
+          <div class="glass-card p-6 rounded-3xl transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-apm-pink/10 border border-apm-pink/30 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+              🌸
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-2">PERFUMES</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Fragrâncias importadas e nacionais, body splashes e hidratantes para deixar o seu dia perfumado.
+            </p>
+          </div>
+
+          <!-- Card 6: Casa & Organização -->
+          <div class="glass-card p-6 rounded-3xl transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-apm-pink/10 border border-apm-pink/30 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+              🏠
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-2">CASA & ORGANIZAÇÃO</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Itens de decoração, organizadores de armário e maquiagem, utilidades práticas para o lar.
+            </p>
+          </div>
+
+          <!-- Card 7: Presentes -->
+          <div class="glass-card p-6 rounded-3xl transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-apm-pink/10 border border-apm-pink/30 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+              🎁
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-2">PRESENTES</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Ideias criativas e mimos especiais para presentear quem você ama ou se dar de presente.
+            </p>
+          </div>
+
+          <!-- Card 8: Achadinhos -->
+          <div class="glass-card p-6 rounded-3xl transition-all duration-300 group hover:-translate-y-1 border-apm-gold/40 bg-gradient-to-b from-apm-card to-amber-950/20">
+            <div class="w-14 h-14 rounded-2xl bg-apm-gold/10 border border-apm-gold/40 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+              🔥
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-2">ACHADINHOS VIRAIS</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Aquele produto inteligente, diferente e super útil que viralizou nas redes e facilita a vida.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO VISUAL DE DESEJO -->
+    <section class="py-20 sm:py-28 relative bg-apm-black overflow-hidden reveal-on-scroll">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-panel p-8 sm:p-14 rounded-[36px] relative overflow-hidden border border-apm-pink/30">
+          <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-apm-pink/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div class="flex items-start gap-3 text-xs text-apm-gray">
-              <span class="text-red-400 font-bold text-sm">✕</span>
-              <span><strong>Outros grupos:</strong> Enviam dezenas de mensagens automáticas de produtos genéricos que ninguém pediu.</span>
+            <div class="lg:col-span-7 space-y-6">
+              <span class="text-xs font-black text-apm-pink uppercase tracking-widest bg-apm-pink/15 px-3.5 py-1 rounded-full">
+                SABE AQUELA SENSAÇÃO?
+              </span>
+
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                "Às vezes você entra procurando uma coisa..." <br/>
+                <span class="text-gradient-pink font-black text-4xl sm:text-5xl">...e encontra cinco que nem sabia que queria.</span>
+              </h2>
+
+              <p class="text-base text-apm-grayLight leading-relaxed">
+                Essa é a magia da curadoria do <strong class="text-white">APM | Universo Feminino</strong>. Trazemos oportunidades reais e itens encantadores que transformam sua rotina sem pesar no bolso.
+              </p>
+
+              <div class="pt-2">
+                <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer" 
+                   class="btn-glow inline-flex items-center gap-3 bg-gradient-to-r from-apm-pink to-rose-600 text-white font-extrabold text-base px-7 py-4 rounded-xl">
+                  <span>💗 EXPERIMENTAR GRÁTIS</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
             </div>
 
-            <div class="flex items-start gap-3 text-xs text-white bg-apm-pink/10 p-3.5 rounded-xl border border-apm-pink/30">
-              <span class="text-apm-pink font-bold text-sm">✓</span>
-              <span><strong>APM Universo Feminino:</strong> Filtro atento para trazer somente itens que chamam atenção pelo estilo, utilidade ou oportunidade real.</span>
+            <!-- COMPOSIÇÃO DE ELEMENTOS VISUAIS -->
+            <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+              <div class="bg-apm-black/80 border border-apm-border p-4 rounded-2xl flex flex-col items-center text-center">
+                <span class="text-3xl mb-2">🏷️</span>
+                <span class="text-xs font-bold text-white">Preço Garimpado</span>
+                <span class="text-[10px] text-apm-pink font-semibold">Sempre o melhor cupom</span>
+              </div>
+              <div class="bg-apm-black/80 border border-apm-border p-4 rounded-2xl flex flex-col items-center text-center">
+                <span class="text-3xl mb-2">💖</span>
+                <span class="text-xs font-bold text-white">Favoritos do Mês</span>
+                <span class="text-[10px] text-apm-gold font-semibold">Destaques da comunidade</span>
+              </div>
+              <div class="bg-apm-black/80 border border-apm-border p-4 rounded-2xl flex flex-col items-center text-center">
+                <span class="text-3xl mb-2">⭐</span>
+                <span class="text-xs font-bold text-white">Qualidade Testada</span>
+                <span class="text-[10px] text-apm-gray">Lojas confiáveis</span>
+              </div>
+              <div class="bg-apm-black/80 border border-apm-border p-4 rounded-2xl flex flex-col items-center text-center">
+                <span class="text-3xl mb-2">🛍️</span>
+                <span class="text-xs font-bold text-white">Sacola Inteligente</span>
+                <span class="text-[10px] text-apm-pink font-semibold">Links diretos e seguros</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO: COMO FUNCIONA -->
+    <section class="py-20 sm:py-28 bg-gradient-to-b from-apm-black via-apm-darkPlum to-apm-black border-t border-apm-border/60 reveal-on-scroll">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-black text-apm-pink uppercase tracking-widest bg-apm-pink/10 border border-apm-pink/30 px-4 py-1.5 rounded-full">
+            PASSO A PASSO
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-6 mb-4 tracking-tight">
+            Como funciona o <span class="text-gradient-pink">garimpo.</span>
+          </h2>
+          <p class="text-base text-apm-gray">
+            Um processo simples e transparente para você não perder tempo.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+          
+          <!-- Step 1 -->
+          <div class="glass-card p-6 rounded-3xl relative text-center">
+            <div class="w-12 h-12 rounded-full bg-apm-pink text-white font-black text-base flex items-center justify-center mx-auto mb-4 shadow-lg shadow-apm-pink/30">
+              01
+            </div>
+            <h3 class="text-base font-extrabold text-white mb-2">A GENTE GARIMPA 🔎</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Monitoramos diariamente lojas parceiras, marcas de moda, beleza e grandes marketplaces em busca de oportunidades.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-card p-6 rounded-3xl relative text-center">
+            <div class="w-12 h-12 rounded-full bg-apm-pink text-white font-black text-base flex items-center justify-center mx-auto mb-4 shadow-lg shadow-apm-pink/30">
+              02
+            </div>
+            <h3 class="text-base font-extrabold text-white mb-2">A GENTE SELECIONA 🧠</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Filtramos apenas o que realmente possui bom custo-benefício, avaliações positivas e apelo estético.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-card p-6 rounded-3xl relative text-center">
+            <div class="w-12 h-12 rounded-full bg-apm-pink text-white font-black text-base flex items-center justify-center mx-auto mb-4 shadow-lg shadow-apm-pink/30">
+              03
+            </div>
+            <h3 class="text-base font-extrabold text-white mb-2">VOCÊ RECEBE 📲</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Enviamos os achadinhos diretamente no grupo de WhatsApp com link direto, preço e cupons disponíveis.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-card p-6 rounded-3xl relative text-center border-apm-pink/50">
+            <div class="w-12 h-12 rounded-full bg-apm-gold text-apm-black font-black text-base flex items-center justify-center mx-auto mb-4 shadow-lg shadow-apm-gold/30">
+              04
+            </div>
+            <h3 class="text-base font-extrabold text-white mb-2">VOCÊ DECIDE 💗</h3>
+            <p class="text-xs text-apm-gray leading-relaxed">
+              Se fizer sentido para você, é só clicar e aproveitar. Se não, basta ignorar. Sem pressão!
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO: POR QUE ENTRAR? -->
+    <section class="py-20 sm:py-28 bg-apm-black relative reveal-on-scroll">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-black text-apm-gold uppercase tracking-widest bg-apm-gold/10 border border-apm-gold/30 px-4 py-1.5 rounded-full">
+            MOTIVOS PARA FAZER PARTE
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-6 mb-4 tracking-tight">
+            Porque procurar tudo sozinha <span class="text-gradient-pink">dá trabalho.</span>
+          </h2>
+          <p class="text-base text-apm-gray">
+            Veja por que ter o APM | Universo Feminino no seu WhatsApp facilita a sua vida.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="glass-card p-7 rounded-3xl">
+            <span class="text-3xl block mb-4">⏱️</span>
+            <h3 class="text-lg font-extrabold text-white mb-2">ECONOMIZE TEMPO</h3>
+            <p class="text-sm text-apm-gray leading-relaxed">
+              Não precisa passar horas rolando feeds e sites procurando descontos. Nosso time faz o trabalho pesado de garimpo por você.
+            </p>
+          </div>
+
+          <div class="glass-card p-7 rounded-3xl">
+            <span class="text-3xl block mb-4">🔎</span>
+            <h3 class="text-lg font-extrabold text-white mb-2">DESCUBRA ACHADOS</h3>
+            <p class="text-sm text-apm-gray leading-relaxed">
+              Encontre itens incríveis, utilidades e peças maravilhosas que talvez passassem totalmente despercebidos na sua navegação diária.
+            </p>
+          </div>
+
+          <div class="glass-card p-7 rounded-3xl">
+            <span class="text-3xl block mb-4">💰</span>
+            <h3 class="text-lg font-extrabold text-white mb-2">ECONOMIZE DINHEIRO</h3>
+            <p class="text-sm text-apm-gray leading-relaxed">
+              Acompanhe quedas repentinas de preço, cupons ativos e oportunidades imperdíveis antes que acabem ou voltem ao preço normal.
+            </p>
+          </div>
+
+          <div class="glass-card p-7 rounded-3xl">
+            <span class="text-3xl block mb-4">📲</span>
+            <h3 class="text-lg font-extrabold text-white mb-2">PRATICIDADE NO WHATSAPP</h3>
+            <p class="text-sm text-apm-gray leading-relaxed">
+              Sem precisar instalar novos aplicativos ou criar cadastros longos. As oportunidades chegam onde você já passa o seu dia.
+            </p>
+          </div>
+
+          <div class="glass-card p-7 rounded-3xl">
+            <span class="text-3xl block mb-4">💗</span>
+            <h3 class="text-lg font-extrabold text-white mb-2">DESCUBRA TENDÊNCIAS</h3>
+            <p class="text-sm text-apm-gray leading-relaxed">
+              Produtos virais, novas coleções de beleza, tendências de moda e utilidades inovadoras organizadas em uma só curadoria.
+            </p>
+          </div>
+
+          <div class="glass-card p-7 rounded-3xl">
+            <span class="text-3xl block mb-4">🛍️</span>
+            <h3 class="text-lg font-extrabold text-white mb-2">UM UNIVERSO INTEIRO</h3>
+            <p class="text-sm text-apm-gray leading-relaxed">
+              Moda, beleza, acessórios, casa, organização e presentes reunidos em um canal focado no universo feminino.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE CONFIANÇA & ZERO SPAM -->
+    <section class="py-20 sm:py-28 bg-gradient-to-b from-apm-black via-apm-darkPlum to-apm-black border-t border-apm-border/60 reveal-on-scroll">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          
+          <!-- Bloco Confiança -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl flex flex-col justify-between border-apm-pink/30">
+            <div>
+              <div class="inline-flex items-center gap-2 text-apm-pink text-xs font-bold uppercase tracking-wider mb-4">
+                <span>🛡️</span> CURADORIA RESPONSÁVEL
+              </div>
+              <h3 class="text-2xl font-extrabold text-white mb-4">
+                Não é sobre postar tudo. É sobre encontrar o que vale a pena.
+              </h3>
+              <p class="text-sm text-apm-grayLight leading-relaxed">
+                O objetivo do <strong class="text-white">Agora Poupe Mais</strong> não é transformar o seu WhatsApp em uma vitrine infinita de mensagens. Nosso compromisso é selecionar aquilo que realmente tem qualidade, preço e utilidade para o seu dia a dia.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-apm-border/60 text-xs text-apm-gray italic">
+              "Menos excesso, mais curadoria de verdade."
+            </div>
+          </div>
+
+          <!-- Bloco Zero Spam -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl flex flex-col justify-between border-apm-gold/30">
+            <div>
+              <div class="inline-flex items-center gap-2 text-apm-gold text-xs font-bold uppercase tracking-wider mb-4">
+                <span>✨</span> TOTAL LIBERDADE
+              </div>
+              <h3 class="text-2xl font-extrabold text-white mb-4">
+                Sem enrolação. Sem compromisso.
+              </h3>
+              <p class="text-sm text-apm-grayLight leading-relaxed">
+                Você entra gratuitamente no grupo, acompanha os achadinhos enviados e decide quando algo te interessa. Não gostou ou quer dar um tempo? É só sair a qualquer momento com apenas um toque.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-apm-border/60 text-xs text-apm-gold font-semibold">
+              Entrada 100% gratuita • Saída livre quando quiser
             </div>
           </div>
 
         </div>
 
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- SEÇÃO ZERO SPAM (SEM COMPROMISSO) -->
-  <section class="py-16 relative reveal-on-scroll">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      
-      <div class="p-8 sm:p-12 rounded-3xl bg-apm-card/80 border border-apm-border shadow-xl">
-        <span class="text-apm-gold font-extrabold text-xs tracking-widest uppercase mb-2 block">
-          TRANSPARÊNCIA TOTAL
-        </span>
+    <!-- SEÇÃO DE URGÊNCIA REAL -->
+    <section class="py-16 bg-apm-wine/40 border-y border-apm-pink/30 relative reveal-on-scroll">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <span class="text-2xl mb-2 inline-block">⚡</span>
         <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">
-          Sem enrolação. Sem compromisso.
+          Achado bom não fica disponível para sempre.
         </h2>
-        <p class="text-sm sm:text-base text-apm-gray leading-relaxed max-w-2xl mx-auto mb-6">
-          Você entra gratuitamente, acompanha os achadinhos no seu ritmo e decide o que interessa. Não gostou? É só sair a qualquer momento. Não queremos que você fique porque precisa. Queremos que fique porque encontra valor.
+        <p class="text-sm sm:text-base text-apm-grayLight max-w-2xl mx-auto mb-8 leading-relaxed">
+          Preços promocionais, estoques e cupons especiais mudam rapidamente nas lojas parceiras. Quando aparecer um achadinho imperdível, vale conferir o grupo enquanto estiver ativo.
         </p>
-
-        <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-white">
-          <span class="bg-apm-darkPlum px-4 py-2 rounded-xl border border-apm-border">100% Gratuito</span>
-          <span class="bg-apm-darkPlum px-4 py-2 rounded-xl border border-apm-border">Livre de Taxas</span>
-          <span class="bg-apm-darkPlum px-4 py-2 rounded-xl border border-apm-border">Saia Quando Quiser</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO DE URGÊNCIA ÉTICA (DINÂMICA DE MERCADO) -->
-  <section class="py-16 bg-apm-darkPlum/80 border-t border-apm-border reveal-on-scroll">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      
-      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-apm-card to-apm-black border border-apm-pink/40 shadow-2xl relative">
-        <span class="text-apm-gold font-extrabold text-xs tracking-widest uppercase mb-3 block">
-          DINÂMICA DAS OFERTAS
-        </span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">
-          Achado bom pode não ficar disponível para sempre.
-        </h2>
-        <p class="text-sm sm:text-base text-apm-gray leading-relaxed max-w-2xl mx-auto mb-8">
-          Preços, cupons de desconto, estoque e condições promocionais nas grandes lojas virtuais mudam rapidamente. Quando aparecer uma oportunidade interessante no grupo, vale a pena conferir enquanto estiver disponível.
-        </p>
-
-        <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 bg-gradient-to-r from-apm-pink to-pink-600 hover:from-apm-pinkHover hover:to-pink-700 text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-apm-pink/30 transition-all hover:scale-105">
+        <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer" 
+           class="btn-glow inline-flex items-center gap-3 bg-gradient-to-r from-apm-pink to-rose-600 text-white font-extrabold text-base px-8 py-4 rounded-2xl">
           <span>QUERO RECEBER OS ACHADINHOS</span>
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- CTA INTERMEDIÁRIO VISUALMENTE IMPACTANTE -->
-  <section class="py-16 relative overflow-hidden reveal-on-scroll">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="bg-gradient-to-r from-apm-darkPlum via-purple-950/70 to-apm-card p-8 sm:p-12 rounded-3xl border-2 border-apm-pink/50 shadow-2xl relative text-center">
-        
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-          Seu próximo achadinho pode estar a um clique.
-        </h2>
-        <p class="text-base sm:text-lg text-apm-gray max-w-2xl mx-auto mb-8">
-          Entre gratuitamente no <strong class="text-white">APM | Universo Feminino</strong> da marca <strong class="text-white">Agora Poupe Mais</strong> e deixe o garimpo por nossa conta.
-        </p>
-
-        <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-apm-pink via-pink-600 to-rose-600 hover:from-apm-pinkHover hover:to-rose-700 text-white font-extrabold text-lg px-9 py-4.5 rounded-2xl shadow-xl shadow-apm-pink/40 transition-all hover:scale-105">
-          <span>💗 ENTRAR NO GRUPO GRÁTIS</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO — FAQ (PERGUNTAS FREQUENTES COM ACCORDION INTERATIVO) -->
-  <section id="faq" class="py-20 bg-apm-darkPlum/60 border-t border-apm-border reveal-on-scroll">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center mb-14">
-        <span class="text-apm-gold font-extrabold text-xs tracking-widest uppercase mb-2 block">
-          TUDO ESCLARECIDO
-        </span>
-        <h2 class="text-3xl font-extrabold text-white">PERGUNTAS FREQUENTES</h2>
-      </div>
-
-      <div class="space-y-4">
-        
-        <!-- Q1 -->
-        <details class="group bg-apm-card rounded-2xl border border-apm-border p-5 cursor-pointer transition-colors hover:border-apm-pink/40">
-          <summary class="flex justify-between items-center font-bold text-white text-base list-none">
-            <span>É grátis para entrar?</span>
-            <span class="text-apm-pink transition-transform duration-300 group-open:rotate-180">▼</span>
-          </summary>
-          <p class="text-xs sm:text-sm text-apm-gray mt-3 leading-relaxed">
-            Sim. O acesso ao grupo e a permanência nele são 100% gratuitos.
-          </p>
-        </details>
-
-        <!-- Q2 -->
-        <details class="group bg-apm-card rounded-2xl border border-apm-border p-5 cursor-pointer transition-colors hover:border-apm-pink/40">
-          <summary class="flex justify-between items-center font-bold text-white text-base list-none">
-            <span>O grupo é só de roupas?</span>
-            <span class="text-apm-pink transition-transform duration-300 group-open:rotate-180">▼</span>
-          </summary>
-          <p class="text-xs sm:text-sm text-apm-gray mt-3 leading-relaxed">
-            Não. O grupo abrange moda, calçados, beleza, maquiagem, skincare, perfumes, acessórios, casa, organização, presentes e achadinhos virais.
-          </p>
-        </details>
-
-        <!-- Q3 -->
-        <details class="group bg-apm-card rounded-2xl border border-apm-border p-5 cursor-pointer transition-colors hover:border-apm-pink/40">
-          <summary class="flex justify-between items-center font-bold text-white text-base list-none">
-            <span>Que tipo de ofertas aparecem?</span>
-            <span class="text-apm-pink transition-transform duration-300 group-open:rotate-180">▼</span>
-          </summary>
-          <p class="text-xs sm:text-sm text-apm-gray mt-3 leading-relaxed">
-            Ofertas, achadinhos, oportunidades, cupons de desconto e produtos interessantes garimpados nas principais lojas e marketplaces.
-          </p>
-        </details>
-
-        <!-- Q4 -->
-        <details class="group bg-apm-card rounded-2xl border border-apm-border p-5 cursor-pointer transition-colors hover:border-apm-pink/40">
-          <summary class="flex justify-between items-center font-bold text-white text-base list-none">
-            <span>Vou receber spam?</span>
-            <span class="text-apm-pink transition-transform duration-300 group-open:rotate-180">▼</span>
-          </summary>
-          <p class="text-xs sm:text-sm text-apm-gray mt-3 leading-relaxed">
-            Não. A proposta do grupo é compartilhar apenas ofertas e achadinhos relevantes, prezando pela curadoria e evitando excesso de mensagens.
-          </p>
-        </details>
-
-        <!-- Q5 -->
-        <details class="group bg-apm-card rounded-2xl border border-apm-border p-5 cursor-pointer transition-colors hover:border-apm-pink/40">
-          <summary class="flex justify-between items-center font-bold text-white text-base list-none">
-            <span>Posso sair quando quiser?</span>
-            <span class="text-apm-pink transition-transform duration-300 group-open:rotate-180">▼</span>
-          </summary>
-          <p class="text-xs sm:text-sm text-apm-gray mt-3 leading-relaxed">
-            Sim. Você pode participar enquanto fizer sentido para você e sair a qualquer momento com total liberdade.
-          </p>
-        </details>
-
-        <!-- Q6 -->
-        <details class="group bg-apm-card rounded-2xl border border-apm-border p-5 cursor-pointer transition-colors hover:border-apm-pink/40">
-          <summary class="flex justify-between items-center font-bold text-white text-base list-none">
-            <span>Tem produtos de beleza e skincare?</span>
-            <span class="text-apm-pink transition-transform duration-300 group-open:rotate-180">▼</span>
-          </summary>
-          <p class="text-xs sm:text-sm text-apm-gray mt-3 leading-relaxed">
-            Sim. Maquiagem, itens de cuidados com a pele, cabelo e autocuidado fazem parte frequente da nossa curadoria.
-          </p>
-        </details>
-
-        <!-- Q7 -->
-        <details class="group bg-apm-card rounded-2xl border border-apm-border p-5 cursor-pointer transition-colors hover:border-apm-pink/40">
-          <summary class="flex justify-between items-center font-bold text-white text-base list-none">
-            <span>Tem acessórios e produtos para casa?</span>
-            <span class="text-apm-pink transition-transform duration-300 group-open:rotate-180">▼</span>
-          </summary>
-          <p class="text-xs sm:text-sm text-apm-gray mt-3 leading-relaxed">
-            Sim! Acreditamos que o universo feminino vai muito além da moda, incluindo bolsas, bijouterias, óculos e utilidades práticas para o lar.
-          </p>
-        </details>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CTA FINAL DE IMPACTO MARECANTE -->
-  <section class="py-24 relative overflow-hidden bg-gradient-to-b from-apm-black via-apm-darkPlum to-apm-black border-t border-apm-border reveal-on-scroll">
-    <div class="absolute inset-0 bg-apm-pink/10 blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-      
-      <!-- LOGO / EMBLEM CENTRAL -->
-      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-apm-pink to-apm-gold p-[2px] mx-auto mb-8 shadow-2xl shadow-apm-pink/30">
-        <div class="w-full h-full bg-apm-black rounded-[14px] flex items-center justify-center font-extrabold text-xl">
-          <span class="text-apm-pink">A</span><span class="text-white">P</span><span class="text-apm-gold">M</span>
+    <!-- CTA INTERMEDIÁRIO -->
+    <section class="py-20 bg-apm-black reveal-on-scroll">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <div class="glass-card p-10 sm:p-14 rounded-[36px] relative overflow-hidden border-2 border-apm-pink/40">
+          <div class="max-w-2xl mx-auto space-y-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+              Seu próximo achadinho pode estar a <span class="text-gradient-pink">um clique.</span>
+            </h2>
+            <p class="text-base text-apm-grayLight">
+              Entre gratuitamente no <strong class="text-white">APM | Universo Feminino</strong> e deixe o garimpo por nossa conta.
+            </p>
+            <div>
+              <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer" 
+                 class="btn-glow inline-flex items-center gap-3 bg-gradient-to-r from-apm-pink via-rose-500 to-apm-pink text-white font-black text-lg px-9 py-4 rounded-2xl">
+                <span>💗 ENTRAR NO GRUPO GRÁTIS</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <h2 class="text-4xl sm:text-6xl font-extrabold text-white leading-tight mb-6 tracking-tight">
-        Pare de descobrir os achadinhos depois <br class="hidden sm:inline" />
-        <span class="text-gradient-pink">que todo mundo já encontrou.</span>
-      </h2>
-      
-      <p class="text-base sm:text-lg text-apm-gray max-w-2xl mx-auto mb-10">
-        Entre no <strong class="text-white">APM | Universo Feminino</strong> da marca <strong class="text-white">Agora Poupe Mais</strong> e deixe o garimpo por nossa conta.
-      </p>
+    <!-- SEÇÃO FAQ (PERGUNTAS FREQUENTES) ACCORDION -->
+    <section class="py-20 sm:py-28 bg-gradient-to-b from-apm-black via-apm-darkPlum to-apm-black border-t border-apm-border/60 reveal-on-scroll">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+          <span class="text-xs font-black text-apm-pink uppercase tracking-widest bg-apm-pink/10 border border-apm-pink/30 px-4 py-1.5 rounded-full">
+            DÚVIDAS FREQUENTES
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-6 mb-4">
+            Tudo o que você precisa saber.
+          </h2>
+        </div>
 
-      <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-apm-pink via-pink-600 to-rose-600 hover:from-apm-pinkHover hover:to-rose-700 text-white font-extrabold text-lg sm:text-xl px-10 py-5 rounded-2xl shadow-2xl shadow-apm-pink/50 transition-all hover:scale-105 active:scale-95">
-        <span>💗 QUERO ENTRAR NO APM</span>
-        <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-      </a>
+        <div class="space-y-4" id="faq-accordion">
+          
+          <!-- Question 1 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-apm-border/80">
+            <button class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white text-base hover:text-apm-pink transition-colors faq-btn">
+              <span>É grátis para entrar?</span>
+              <span class="text-apm-pink text-xl font-black shrink-0 icon">+</span>
+            </button>
+            <div class="hidden px-5 sm:px-6 pb-6 text-sm text-apm-gray leading-relaxed border-t border-apm-border/40 pt-4 content">
+              Sim! O acesso ao grupo APM | Universo Feminino é 100% gratuito. Você não paga nada para entrar nem para acompanhar as ofertas enviadas diariamente.
+            </div>
+          </div>
 
-      <p class="text-xs text-apm-gray mt-6 tracking-wide font-medium">
-        Grátis • Universo feminino • Ofertas e achadinhos no WhatsApp
-      </p>
+          <!-- Question 2 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-apm-border/80">
+            <button class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white text-base hover:text-apm-pink transition-colors faq-btn">
+              <span>O grupo é só de roupas?</span>
+              <span class="text-apm-pink text-xl font-black shrink-0 icon">+</span>
+            </button>
+            <div class="hidden px-5 sm:px-6 pb-6 text-sm text-apm-gray leading-relaxed border-t border-apm-border/40 pt-4 content">
+              Não. O grupo abrange todo o universo feminino: moda, calçados, bolsas, acessórios, maquiagem, skincare, perfumes, produtos para casa, organização, presentes e achadinhos úteis e virais.
+            </div>
+          </div>
 
-    </div>
-  </section>
+          <!-- Question 3 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-apm-border/80">
+            <button class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white text-base hover:text-apm-pink transition-colors faq-btn">
+              <span>Que tipo de ofertas aparecem no grupo?</span>
+              <span class="text-apm-pink text-xl font-black shrink-0 icon">+</span>
+            </button>
+            <div class="hidden px-5 sm:px-6 pb-6 text-sm text-apm-gray leading-relaxed border-t border-apm-border/40 pt-4 content">
+              Garimpamos ofertas com descontos reais, cupons de desconto acumuláveis, promoções relâmpago e achadinhos com excelente custo-benefício em lojas reconhecidas.
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-apm-border/80">
+            <button class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white text-base hover:text-apm-pink transition-colors faq-btn">
+              <span>Vou receber spam ou mensagens excessivas?</span>
+              <span class="text-apm-pink text-xl font-black shrink-0 icon">+</span>
+            </button>
+            <div class="hidden px-5 sm:px-6 pb-6 text-sm text-apm-gray leading-relaxed border-t border-apm-border/40 pt-4 content">
+              Não. A proposta do Agora Poupe Mais é focar exclusivamente na curadoria de achadinhos relevantes, priorizando a qualidade do conteúdo enviado.
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-apm-border/80">
+            <button class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white text-base hover:text-apm-pink transition-colors faq-btn">
+              <span>Posso sair quando quiser?</span>
+              <span class="text-apm-pink text-xl font-black shrink-0 icon">+</span>
+            </button>
+            <div class="hidden px-5 sm:px-6 pb-6 text-sm text-apm-gray leading-relaxed border-t border-apm-border/40 pt-4 content">
+              Sim, totalmente. Não existe qualquer tipo de fidelidade. Você pode sair do grupo a qualquer momento com apenas um clique nas configurações do WhatsApp.
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-apm-border/80">
+            <button class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white text-base hover:text-apm-pink transition-colors faq-btn">
+              <span>Tem produtos de beleza e skincare?</span>
+              <span class="text-apm-pink text-xl font-black shrink-0 icon">+</span>
+            </button>
+            <div class="hidden px-5 sm:px-6 pb-6 text-sm text-apm-gray leading-relaxed border-t border-apm-border/40 pt-4 content">
+              Sim! Postamos frequentemente maquiagens, itens de skincare, séruns, protetores solares, produtos para cabelo e cuidados com o corpo.
+            </div>
+          </div>
+
+          <!-- Question 7 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-apm-border/80">
+            <button class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white text-base hover:text-apm-pink transition-colors faq-btn">
+              <span>Tem acessórios e joias/bijuterias?</span>
+              <span class="text-apm-pink text-xl font-black shrink-0 icon">+</span>
+            </button>
+            <div class="hidden px-5 sm:px-6 pb-6 text-sm text-apm-gray leading-relaxed border-t border-apm-border/40 pt-4 content">
+              Sim! Brincos, colares, anéis, bolsas, óculos e relógios fazem parte constante das pesquisas do nosso garimpo.
+            </div>
+          </div>
+
+          <!-- Question 8 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-apm-border/80">
+            <button class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white text-base hover:text-apm-pink transition-colors faq-btn">
+              <span>Tem produtos para casa e organização?</span>
+              <span class="text-apm-pink text-xl font-black stroke-0 icon">+</span>
+            </button>
+            <div class="hidden px-5 sm:px-6 pb-6 text-sm text-apm-gray leading-relaxed border-t border-apm-border/40 pt-4 content">
+              Com certeza. Entendemos que o universo feminino envolve praticidade para o lar, organizadores inteligentes, itens de decoração e utilidades domésticas.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA FINAL DE IMPACTO MARCANTE -->
+    <section class="py-24 relative overflow-hidden bg-gradient-to-b from-apm-black via-apm-darkPlum to-apm-black border-t border-apm-border reveal-on-scroll">
+      <div class="absolute inset-0 bg-apm-pink/10 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+        
+        <!-- LOGO OFICIAL CENTRAL COMPLETO NO CTA FINAL -->
+        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-apm-black border-2 border-apm-pink/60 p-1 mx-auto mb-8 shadow-2xl shadow-apm-pink/40 flex items-center justify-center">
+          <svg class="w-full h-full" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="250" cy="250" r="245" fill="#08050B"/>
+            <path d="M115 160 L118 150 L121 160 L131 163 L121 166 L118 176 L115 166 L105 163 Z" fill="#FFC700"/>
+            <path d="M365 135 L368 128 L371 135 L378 138 L371 141 L368 148 L365 141 L358 138 Z" fill="#FFC700"/>
+            <path d="M196 82 C178 82 153 92 135 120 C148 116 168 118 180 128 C192 138 188 152 181 165 C172 180 152 195 152 201 Z" fill="#FF2A85"/>
+            <path d="M215 90 L285 90 C288 90 290 92 291 95 L318 182 C319 186 316 190 312 190 L198 190 Z" stroke="#FF2A85" stroke-width="12" fill="none"/>
+            <path d="M235 90 V70 C235 56 246 45 260 45 C274 45 285 56 285 70 V90" stroke="#FF2A85" stroke-width="12" stroke-linecap="round" fill="none"/>
+            <path d="M310 115 C303 115 298 120 298 127 C298 139 310 150 318 157 C326 150 338 139 338 127 Z" fill="#FF2A85"/>
+            <path d="M72 280 L140 172 L208 280 H168 L140 230 L112 280 H72 Z" fill="#FFFFFF"/>
+            <path d="M140 225 L140 280 M120 258 L140 280 L160 258" stroke="#FF2A85" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M186 172 H242 C265 172 282 188 282 208 C282 228 265 244 242 244 H216 V280 H186 V172 Z" fill="#FFFFFF"/>
+            <path d="M276 172 H310 L336 230 L362 172 H396 V280 H368 V222 L345 272 H327 L304 222 V280 H276 V172 Z" fill="#FF2A85"/>
+            <text x="60" y="322" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28">AGORA</text>
+            <text x="215" y="322" fill="#FF2A85" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28">POUPE MAIS</text>
+          </svg>
+        </div>
+
+        <h2 class="text-4xl sm:text-6xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+          Pare de descobrir os achadinhos depois <br class="hidden sm:inline" />
+          <span class="text-gradient-pink">que todo mundo já encontrou.</span>
+        </h2>
+
+        <p class="text-base sm:text-xl text-apm-grayLight max-w-2xl mx-auto mb-10 leading-relaxed">
+          Entre no <strong class="text-white">APM | Universo Feminino</strong> agora mesmo e deixe o garimpo das melhores ofertas por nossa conta.
+        </p>
+
+        <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer" 
+           class="btn-glow inline-flex items-center justify-center gap-3 bg-gradient-to-r from-apm-pink via-rose-500 to-apm-pink text-white font-black text-xl px-10 py-5 rounded-2xl w-full sm:w-auto">
+          <span>💗 QUERO ENTRAR NO APM</span>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        <p class="text-xs text-apm-gray font-medium mt-4">
+          Grátis • Universo Feminino • Ofertas e achadinhos no WhatsApp
+        </p>
+
+      </div>
+    </section>
+  </main>
 
   <!-- RODAPÉ REFORÇANDO A MARCA PRINCIPAL (AGORA POUPE MAIS) -->
-  <footer class="py-12 bg-apm-black border-t border-apm-border text-center text-xs text-apm-gray">
+  <footer class="py-12 bg-apm-black border-t border-apm-border text-center text-xs text-apm-gray mb-20 sm:mb-0">
     <div class="max-w-7xl mx-auto px-4">
       
       <div class="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
         
         <!-- BRAND LOGO & HIERARCHY -->
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-xl bg-apm-card border border-apm-pink/40 flex items-center justify-center font-bold text-white text-xs">
-            <span class="text-apm-pink">A</span>PM
+          <div class="w-10 h-10 rounded-full bg-apm-black border border-apm-pink/50 p-0.5 flex items-center justify-center shrink-0 shadow-md">
+            <svg class="w-full h-full" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="250" cy="250" r="245" fill="#08050B"/>
+              <path d="M196 82 C178 82 153 92 135 120 C148 116 168 118 180 128 C192 138 188 152 181 165 C172 180 152 195 152 201 Z" fill="#FF2A85"/>
+              <path d="M215 90 L285 90 L318 182 L198 190 Z" stroke="#FF2A85" stroke-width="14" fill="none"/>
+              <path d="M72 280 L140 172 L208 280 H168 L140 230 L112 280 H72 Z" fill="#FFFFFF"/>
+              <path d="M186 172 H242 C265 172 282 188 282 208 C282 228 265 244 242 244 H216 V280 H186 V172 Z" fill="#FFFFFF"/>
+              <path d="M276 172 H310 L336 230 L362 172 H396 V280 H368 V222 L345 272 H327 L304 222 V280 H276 V172 Z" fill="#FF2A85"/>
+            </svg>
           </div>
           <div class="flex flex-col text-left">
             <span class="font-black text-white text-sm tracking-tight uppercase leading-none">AGORA POUPE MAIS</span>
@@ -1211,22 +1080,43 @@
     </div>
   </footer>
 
-  <!-- BOTÃO FIXO EXCLUSIVO PARA MOBILE -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-apm-black/95 border-t border-apm-border backdrop-blur-xl z-50 shadow-2xl">
-    <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer"
-       class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-apm-pink to-pink-600 active:from-apm-pinkHover text-white font-extrabold py-3.5 px-4 rounded-xl shadow-lg shadow-apm-pink/30 text-center text-sm tracking-wide">
+  <!-- BOTÃO FIXO EXCLUSIVO MOBILE NO FOOTER -->
+  <div class="fixed bottom-0 left-0 right-0 p-3 bg-apm-black/95 border-t border-apm-pink/40 backdrop-blur-xl z-50 sm:hidden flex items-center justify-center">
+    <a href="https://garimpa.store/c/universo-feminino-hvtoo" target="_blank" rel="noopener noreferrer" 
+       class="btn-glow w-full bg-gradient-to-r from-apm-pink via-rose-500 to-apm-pink text-white font-black text-sm py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 text-center shadow-lg">
       <span>💗 ENTRAR NO GRUPO GRÁTIS</span>
-      <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
     </a>
   </div>
 
-  <!-- JAVASCRIPT LIGHTWEIGHT CONTROLLER FOR SCROLL ANIMATIONS -->
+  <!-- JAVASCRIPT FOR FAQ ACCORDION & SCROLL REVEAL ANIMATIONS -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Intersection Observer for scroll animations
+      
+      // FAQ Accordion Toggle
+      const faqButtons = document.querySelectorAll('.faq-btn');
+      faqButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector('.icon');
+          const isHidden = content.classList.contains('hidden');
+
+          // Close all other FAQs
+          document.querySelectorAll('#faq-accordion .content').forEach(c => c.classList.add('hidden'));
+          document.querySelectorAll('#faq-accordion .icon').forEach(i => i.textContent = '+');
+
+          if (isHidden) {
+            content.classList.remove('hidden');
+            icon.textContent = '−';
+          }
+        });
+      });
+
+      // Scroll Reveal Animation Observer
       const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
       };
 
       const observer = new IntersectionObserver((entries) => {
@@ -1237,9 +1127,11 @@
         });
       }, observerOptions);
 
-      document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+
     });
   </script>
-
 </body>
 </html>
