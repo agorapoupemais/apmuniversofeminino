@@ -259,45 +259,31 @@
     }
   </style>
 
-  <!-- META PIXEL CONFIGURATION -->
-  <script>
-    const META_PIXEL_ID = "1322609486391652";
-    const WHATSAPP_URL = "https://chat.whatsapp.com/In81ZPCWcgh1ACUqBfVO8u";
+  <!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-    // Meta Pixel Base Code
-    if (META_PIXEL_ID && META_PIXEL_ID !== "1322609486391652") {
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      
-      fbq('init', META_PIXEL_ID);
-      fbq('track', 'PageView');
-    }
+fbq('init', '1322609486391652');
+fbq('track', 'PageView');
 
-    function handleWhatsAppClick(e) {
-    if (e) e.preventDefault();
+const WHATSAPP_URL = "https://chat.whatsapp.com/In81ZPCWcgh1ACUqBfVO8u";
 
-    // Registra o Lead no Meta Pixel
-    if (typeof fbq === 'function') {
-      try {
-        fbq('track', 'Lead');
-      } catch(err) {
-        console.error("Meta Pixel tracking error:", err);
-      }
-    }
+function handleWhatsAppClick(e) {
+  if (e) e.preventDefault();
 
-    // Abre o grupo do WhatsApp
-    if (WHATSAPP_URL) {
-      window.location.href = WHATSAPP_URL;
-    } else {
-      alert("Link do WhatsApp não configurado.");
-    }
-  }
+  fbq('track', 'Lead');
+
+  setTimeout(function() {
+    window.location.href = WHATSAPP_URL;
+  }, 300);
+}
 </script>
 </head>
 <body>
